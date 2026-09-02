@@ -11,7 +11,7 @@
 
 1. Point generators at this folder: `out/STR-…`, `out/PLN-…`, `out/TC-…`, `out/RPT-…`.
 2. Stamp YAML or a control table with `generator` and `skill_version`.
-3. Do not promote to `examples/` or `ready-to-paste/` until a human accepts the artefact as golden.
+3. Do not promote to `docs/` until a human accepts the artefact as golden.
 4. Delete drafts you do not need; keep this README and `.gitkeep`.
 5. Every file here remains draft until a QA Analyst or named approver verifies it.
 

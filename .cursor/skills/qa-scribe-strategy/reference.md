@@ -47,4 +47,4 @@ Jira/Xray for case repository, Confluence for signed docs, optional Postman/Play
 
 ## Golden regression
 
-After any skill patch, confirm `examples/strategy/vaultgrid-strategy.md` still has **zero** named hours and **zero** cycle deadline (rubric S17).
+After any skill patch, confirm `docs/strategy.md` still has **zero** named hours and **zero** cycle deadline (rubric S17).

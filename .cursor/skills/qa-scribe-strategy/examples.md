@@ -1,10 +1,10 @@
 # Strategy skill — examples
 
-Pointer to the golden strategy: `examples/strategy/vaultgrid-strategy.md`.
+Pointer to the golden strategy: `docs/strategy.md`.
 
 ## Excerpt — risk-based approach (acceptable)
 
-VaultGrid product risk drives depth. RSK-ISO-01 (cross-tenant disclosure) and RSK-INT-01 (tampered ingest) are Critical: every cycle that touches authz or upload must include permission-bypass and hash-mismatch cases. Low risks such as leftover synthetic files (RSK-DAT-01) are sampled at teardown, not designed as a large functional pack.
+VaultGrid product risk drives depth. RSK-ISO-01 (Company A sees Company B in search) is Critical: every cycle that touches search must include TC-ISO-001-style cases. Low cosmetic (export file name) is last.
 
 ## Excerpt — fail (this is a plan leaking into a strategy)
 
@@ -16,4 +16,4 @@ Exit the approach for a release train only when: Critical isolation and integrit
 
 ## Ready-to-paste
 
-`ready-to-paste/vaultgrid-strategy.md` is the Confluence-cleaned golden.
+`docs/strategy.md` is the Confluence-cleaned golden.

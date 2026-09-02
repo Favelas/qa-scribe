@@ -10,7 +10,7 @@
 ## How to use this file
 
 1. Score each pack; spot-check every Critical/High case.
-2. Packs that omit permission-bypass or hash-mismatch when those risks are in intake **fail**.
+2. Packs that omit isolation search or role-button cases when those risks are in intake **fail**.
 3. Use with `qa-scribe-improve`.
 4. Delete this “How to use this file” block after wiki paste.
 5. Do not accept “verify UI” as a case.
@@ -27,8 +27,8 @@
 | C06 | Risk-first ordering in the pack | Must | |
 | C07 | One behaviour per case | Must | |
 | C08 | Markdown **and** CSV with Xray-oriented columns | Must | |
-| C09 | Permission-bypass / cross-tenant case present when isolation/RBAC is in scope | Must | |
-| C10 | Hash-mismatch or truncated-file case present when integrity is in scope | Must | |
+| C09 | Isolation search case present when two companies are in scope (A must not see B on screen) | Must | |
+| C10 | Role-button cases present when RBAC is in scope; fail-to-save when validation is in scope | Must | |
 | C11 | Technique tags from the allowed set only | Must | |
 | C12 | No invented REQ/RSK; no real hashes or customer data | Must | |
 | C13 | Human sign-off; generator + version | Must | |

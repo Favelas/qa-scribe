@@ -19,7 +19,7 @@ Intake YAML is not a signed test document. A Senior QA Analyst (or the role name
 
 ## Confidentiality
 
-Refuse real employer names, real tickets, real evidence hashes, real customer data. Ask the user to fictionalise or use VaultGrid (`product/vaultgrid.md`).
+Refuse real employer names, real tickets, real evidence hashes, real customer data. Ask the user to fictionalise or use VaultGrid (`docs/product.md`).
 
 ## Workflow
 
@@ -77,13 +77,13 @@ Optional: `hours_planned`, `hours_actual`, `defects[]` (IEEE 1044 category + sev
 ## Fail if
 
 - You filled dates, hours, or surnames that the user did not provide.
-- You created REQ or RSK IDs not in intake or `product/`.
+- You created REQ or RSK IDs not in intake or `docs/`.
 - You proceeded to generate a plan without hours and deadline.
 
 ## Pointers
 
 - Example YAML: `inputs/examples/`
-- VaultGrid: `product/vaultgrid.md`
+- VaultGrid: `docs/product.md`
 - Principles: `standards/documentation-principles.md`
 - Validator (optional): `python3 scripts/validate_intake.py inputs/examples/plan.cycle-59.yaml`
 

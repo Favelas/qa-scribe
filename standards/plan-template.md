@@ -100,7 +100,7 @@ This-cycle risks: mitigation, trigger, test refs (`TC-…` / `RSK-…`).
 
 ## Annex A — Requirements traceability matrix
 
-Mandatory. Either embed a table or link `examples/rtm/…` / `out/…-rtm.csv`. Columns: REQ ID, risk IDs, feature, test case IDs, owner, cycle result placeholder.
+Mandatory. Either embed a table or link `docs/rtm.csv` / `out/…-rtm.csv`. Columns: REQ ID, risk IDs, feature, test case IDs, owner, cycle result placeholder.
 
 ## Annex B — Named allocation table
 

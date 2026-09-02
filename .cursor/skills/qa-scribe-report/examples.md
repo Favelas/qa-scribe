@@ -2,8 +2,8 @@
 
 Goldens:
 
-- `examples/reports/cycle-59-status.md`
-- `examples/reports/cycle-59-completion.md`
+- `docs/report-status.md`
+- `docs/report-completion.md`
 
 ## Excerpt — status forecast (acceptable)
 
@@ -11,13 +11,13 @@ Exit criterion “no open Severity 1” is **at risk**: DEF-C59-004 (hash trunca
 
 ## Excerpt — completion evaluation (acceptable)
 
-RSK-EXP-01 remains High: Reporter export can include investigator notes without a separate notes ACL. Recommendation: **go-with-risks** with Admin template review as compensating control. Owner: Priya Shah.
+RSK-RBAC-03 remains High: Read-only still sees Export; click denied; no file. Recommendation: **go-with-risks**. Owner: Priya Shah.
 
 ## Excerpt — fail
 
-“100% pass. Go.” while RSK-EXP-01 is still High in the same file. **Reject.**
+“100% pass. Go.” while RSK-RBAC-03 is still High in the same file. **Reject.**
 
 ## Ready-to-paste
 
-`ready-to-paste/cycle-59-status.md`  
-`ready-to-paste/cycle-59-completion.md`
+`docs/report-status.md`  
+`docs/report-completion.md`

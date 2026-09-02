@@ -1,50 +1,30 @@
-# VaultGrid strategy intake
-# Paste into chat and invoke qa-scribe-strategy.
-# Do not add cycle_deadline or named_hours — those belong in plan intake.
-
 document: strategy
 confidential: false
 product_name: VaultGrid
 author_role: Senior QA Analyst
 strategy_id: STR-VAULTGRID-001
 item_under_test: >
-  Multi-tenant digital-evidence vault (web + HTTP API): tenant isolation,
-  four roles (Admin, Investigator, Reporter, Read-only), SHA-256 ingest,
-  append-only audit, region-bound storage US/UK/Brazil/Australia.
+  Fictional web app. Two companies on one login page. Testers use the browser.
+  Isolation: Company A must not see Company B case titles in search.
 objectives:
-  - Isolation holds for UI and API including UUID guessing
-  - Role matrix enforced including no self-elevation and stale-token reject
-  - Truncated and hash-mismatched uploads are not stored
-  - Allow and deny paths are audited
-  - Exports stay tenant- and role-scoped
-  - UAT executable in declared home regions
+  - Isolation on search and case list
+  - Role buttons match docs/roles.md
+  - Login success and failure
+  - Empty title does not create a case
+  - Denied actions appear in Activity log
 in_scope:
-  - Functional upload, view, download, notes, role admin, audit query, exports
-  - Authorisation, isolation, integrity, API authz, regression of those packs
-  - UAT facilitation when a cycle plan names regions
+  - Web UI listed in docs/requirements.md
 out_of_scope:
-  - Standing performance programme (no NFRs in catalogue)
-  - Penetration testing beyond functional authorisation
-  - IdP internals, billing, mobile native, physical seizure
-risk_register_ref: product/risks.md
-requirements_ref: product/requirements.md
-rbac_matrix_ref: product/rbac-matrix.md
-environments_classes:
-  - development
-  - test_system
-  - uat_per_home_region
-tools:
-  - Jira/Xray
-  - Confluence
-  - HTTP client
-  - optional Postman/Playwright (supporting only)
-automation_intent: >
-  Manual first for isolation, hash mismatch, audit deny.
-  API 401/403/404 smoke may be automated after oracles are signed.
+  - API codes as primary oracle
+  - Hashing, mobile, billing, pentest
+risk_register_ref: docs/risks.md
+requirements_ref: docs/requirements.md
+rbac_matrix_ref: docs/roles.md
+environments_classes: [test_system, uat]
+tools: [Jira/Xray, Confluence, Chromium]
 iso_25010_overlay: true
 roles_who_tests_what:
-  component: Development
-  system_functional_authz: QA Analysts
+  system_ui: QA Analysts
   test_design: Senior QA Analyst
-  uat: Business coordinators
+  uat: Business coordinator
   strategy_signoff: QA Manager

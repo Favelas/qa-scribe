@@ -15,7 +15,7 @@ Trigger terms: improve the skill, learning loop, rubric score, rewrite the gener
 
 ## Human still signs
 
-Learnings are engineering notes for the skills. They are not signed testware. Golden promotion to `examples/` still needs explicit human acceptance.
+Learnings are engineering notes for the skills. They are not signed testware. Golden promotion to `docs/` still needs explicit human acceptance.
 
 ## Workflow
 
@@ -35,9 +35,9 @@ Learnings are engineering notes for the skills. They are not signed testware. Go
 
 | Generator | Must still be true after the patch |
 | --- | --- |
-| strategy | `examples/strategy/vaultgrid-strategy.md` — zero named hours, zero cycle deadline |
-| plan | `examples/plan/cycle-59-plan.md` — IEEE 829 15 sections, deadline, named allocation, RTM, approvals |
-| cases | Permission-bypass and hash-mismatch still present with REQ + RSK + technique |
+| strategy | `docs/strategy.md` — zero named hours, zero cycle deadline |
+| plan | `docs/plan.md` — IEEE 829 15 sections, deadline, named allocation, RTM, approvals |
+| cases | Isolation search (A must not see B) and role-button cases still present with REQ + RSK + technique |
 | prompts | Field layout still forced |
 | report | Status ≠ completion; completion is go-with-risks or no-go with leftover High |
 

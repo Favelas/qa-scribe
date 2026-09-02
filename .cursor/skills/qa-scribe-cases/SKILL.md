@@ -1,6 +1,6 @@
 ---
 name: qa-scribe-cases
-description: Writes IEEE 829 / ISO 29119-3 test case packs with ISO 29119-4 and ISTQB techniques and Xray-oriented CSV. Use when the user asks for test cases, Xray cases, RBAC cases, hash-mismatch cases, permission-bypass, equivalence partitioning, decision tables, or a case pack to execute.
+description: Writes IEEE 829 / ISO 29119-3 test case packs with ISO 29119-4 and ISTQB techniques and Xray-oriented CSV. Use when the user asks for test cases, Xray cases, RBAC cases, isolation search, permission buttons, equivalence partitioning, decision tables, or a case pack to execute.
 ---
 
 # QA Scribe — test cases
@@ -65,7 +65,7 @@ Stamp: `generator: qa-scribe-cases`, `skill_version: 1.0.0`.
 
 ## Fail-if-missing
 
-`standards/rubrics/cases.md`. Immediate fail: missing REQ or RSK; no bypass case when RBAC/isolation in scope; no hash-mismatch/truncated case when integrity in scope; >8 steps; mixed features.
+`standards/rubrics/cases.md`. Immediate fail: missing REQ or RSK; no isolation search case when two companies are in scope; no role-button case when RBAC is in scope; >8 steps; mixed features.
 
 ## Output path
 
@@ -73,10 +73,8 @@ Stamp: `generator: qa-scribe-cases`, `skill_version: 1.0.0`.
 
 ## VaultGrid worked examples
 
-- `examples/cases/rbac-tenant-isolation.md` (includes cross-tenant 404)
-- `examples/cases/hash-chain-of-custody.md` (includes hash mismatch)
-- `examples/cases/audit-log.md`
-- `examples/cases/export.csv`
+- `docs/cases.md` (UI isolation + role buttons)
+- `docs/cases.csv`
 - Intake: `inputs/examples/cases.rbac.yaml`
 
 ## After user corrections

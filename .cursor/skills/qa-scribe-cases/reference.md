@@ -15,15 +15,14 @@ State this mapping once at the top of the pack.
 
 ## Permission-bypass pattern (ROLE-MATRIX / NEG)
 
-Actor in tenant A, object UUID of tenant B. Expected: **404**, empty body, audit deny in tenant A. Do not expect 403 for cross-tenant (existence oracle — RSK-ISO-02).
+Actor in company A, search for company B’s case title. Expected: **zero rows** on screen.
 
-Home-tenant wrong role: **403**, audit deny.
+Home-company wrong role: **button hidden** (Upload/Export/Manage users). Do not require HTTP codes unless intake says so.
 
-## Integrity pattern (INTEGRITY / NEG / BVA)
+## Integrity pattern (when intake has validation)
 
-- Hash mismatch: client SHA-256 ≠ server hash → reject, no object
-- Truncated: bytes < Content-Length → reject
-- Size boundaries: 0 bytes, 1 byte, max allowed size, max+1 if a limit exists in intake
+- Empty required field → error, no new record (BVA / NEG)
+- Incomplete upload → file not listed as complete
 
 ## Procedure quality
 
@@ -41,4 +40,4 @@ Requirement Keys: semicolon-separated REQ IDs. Labels: area, risk id, `qa-scribe
 
 ## Golden regression
 
-RBAC pack must still contain a cross-tenant case. Hash pack must still contain mismatch. Both must trace REQ + RSK + technique.
+`docs/cases.md` must still contain isolation search (A must not see B) and role-button cases with REQ + RSK + technique.

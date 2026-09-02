@@ -1,44 +1,34 @@
-# VaultGrid RBAC case-pack intake
-# Paste into chat and invoke qa-scribe-cases.
-
 document: cases
 confidential: false
 product_name: VaultGrid
 author_role: Senior QA Analyst
 cycle_id: Cycle 59
-area: RBAC
-id_next: TC-RBAC-001
+area: UI
+id_next: TC-ISO-001
 environments:
   class: test_system
-  tenants: [NORTHWIND, GLOBEX]
+  companies: [NORTHWIND, GLOBEX]
   roles: [Admin, Investigator, Reporter, Read-only]
   build: vaultgrid-2026.59.x
+  oracle: browser_ui
 requirements:
+  - REQ-AUTH-01
+  - REQ-AUTH-02
+  - REQ-ISO-01
   - REQ-RBAC-01
   - REQ-RBAC-02
   - REQ-RBAC-03
   - REQ-RBAC-04
+  - REQ-VAL-01
   - REQ-RBAC-05
-  - REQ-RBAC-06
-  - REQ-RBAC-07
-  - REQ-RBAC-08
-  - REQ-API-01
-  - REQ-API-02
+  - REQ-AUD-01
 risks:
-  - id: RSK-ISO-01
-    level: Critical
-  - id: RSK-ISO-02
-    level: High
-  - id: RSK-RBAC-01
-    level: High
-  - id: RSK-RBAC-02
-    level: High
-  - id: RSK-API-01
-    level: High
-  - id: RSK-EXP-01
-    level: High
-rbac_matrix_ref: product/rbac-matrix.md
-xray_project_key: VG
+  - { id: RSK-ISO-01, level: Critical }
+  - { id: RSK-RBAC-01, level: High }
+  - { id: RSK-RBAC-02, level: High }
+  - { id: RSK-RBAC-03, level: High }
+  - { id: RSK-VAL-01, level: Medium }
+  - { id: RSK-AUD-01, level: Medium }
+rbac_matrix_ref: docs/roles.md
 include_permission_bypass: true
-cross_tenant_expected_http: 404
-home_tenant_wrong_role_http: 403
+isolation_rule: Company A search must not show Company B titles

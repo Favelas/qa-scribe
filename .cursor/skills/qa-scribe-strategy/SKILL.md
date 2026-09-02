@@ -79,11 +79,11 @@ Use `standards/rubrics/strategy.md` and sibling `rubric.md`. Immediate fail: any
 
 ## Output path
 
-Write `out/STR-<PRODUCT>-001.md`. Do not promote to `examples/` or `ready-to-paste/` unless the user accepts it as golden.
+Write `out/STR-<PRODUCT>-001.md`. Do not promote to `docs/` unless the user accepts it as golden.
 
 ## VaultGrid worked example
 
-`examples/strategy/vaultgrid-strategy.md`  
+`docs/strategy.md`  
 Intake shape: `inputs/examples/strategy.vaultgrid.yaml`  
 Reference: `reference.md`  
 Style: `examples.md`

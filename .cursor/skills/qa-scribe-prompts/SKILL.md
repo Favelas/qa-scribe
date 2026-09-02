@@ -64,7 +64,7 @@ Each pack **must force**: field list, risk-first order, named techniques, ID sch
 
 ## VaultGrid worked example
 
-`examples/prompts/rbac-design-prompts.md`  
+`docs/prompts.md`  
 `reference.md`, `examples.md`
 
 ## After user corrections

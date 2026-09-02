@@ -2,7 +2,7 @@
 
 Canonical scored rubric: `standards/rubrics/cases.md`.
 
-Human still signs. Goldens under `examples/cases/`.
+Human still signs. Goldens under `docs/`.
 
 Immediate fail:
 
@@ -10,5 +10,6 @@ Immediate fail:
 - Priority not derived from risk
 - No CSV
 - Isolation in scope but no permission-bypass / cross-tenant case
-- Integrity in scope but no hash-mismatch or truncated-file case
+- Isolation in scope but no “A must not see B in search” case
+- Integrity in scope (only if intake has it) but no fail-to-save / incomplete upload case
 - Invented REQ/RSK or real hashes

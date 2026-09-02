@@ -89,4 +89,4 @@ Xray is a **tool schema**, not a standard. Columns exist so the pack is paste-re
 Summary,Priority,Preconditions,Steps,Expected Result,Requirement Keys,Labels,Technique
 ```
 
-`Summary` should start with the identifier, e.g. `TC-RBAC-004 Cross-tenant evidence UUID returns 404`.
+`Summary` should start with the identifier, e.g. `TC-ISO-001 Company A search does not show Company B`.

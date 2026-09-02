@@ -73,8 +73,8 @@ Also required: **RTM** (CSV and/or annex table); named people vs hours vs owns; 
 
 ## VaultGrid worked example
 
-`examples/plan/cycle-59-plan.md`  
-`examples/rtm/cycle-59-rtm.csv`  
+`docs/plan.md`  
+`docs/rtm.csv`  
 `inputs/examples/plan.cycle-59.yaml`  
 `reference.md`, `examples.md`
 
