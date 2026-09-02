@@ -9,18 +9,16 @@ Work is mainly **manual functional QA** on security-sensitive enterprise SaaS: m
 Playwright and Postman are supporting skills, not this product.  
 Thesis: AI drafts; named standards constrain headings and fields; a human owns risk ranking, severity, and sign-off.
 
-### Recruiter fast path (about five minutes)
-
-Read these four files in order. They are the portfolio. Skip folders until these make sense.
-
-| # | Open | What it proves |
-| --- | --- | --- |
-| 1 | This README | Positioning and the five generators |
-| 2 | [VaultGrid test strategy](examples/strategy/vaultgrid-strategy.md) | Strategy ≠ plan. No sprint dates or tester hours |
-| 3 | [Cycle 59 test plan](examples/plan/cycle-59-plan.md) | IEEE 829: names, hours, deadline, RTM, approvals |
-| 4 | [RBAC isolation cases](examples/cases/rbac-tenant-isolation.md) then [completion report](examples/reports/cycle-59-completion.md) | Permission-bypass design; residual High risk named (go-with-risks, not fake all-green) |
-
-If you only open one case, use **TC-RBAC-004** (cross-tenant 404) in the README below.
+> **How a recruiter should walk it (60 seconds)**  
+> These five files *are* the portfolio. Everything else in the repo supports them.
+>
+> 1. **[README.md](README.md)** — who you are and the five generators.  
+> 2. **[examples/strategy/](examples/strategy/)** — you know strategy ≠ plan.  
+> 3. **[examples/plan/](examples/plan/)** — you can staff a cycle.  
+> 4. **[examples/cases/rbac-tenant-isolation.md](examples/cases/rbac-tenant-isolation.md)** — you design isolation / negative cases.  
+> 5. **[examples/reports/cycle-59-completion.md](examples/reports/cycle-59-completion.md)** — you report residual risk, not a fake green dashboard.
+>
+> One case if you only open one: **TC-RBAC-004** (cross-tenant 404) in this README.
 
 | Intake | Output | Standard(s) |
 | --- | --- | --- |
