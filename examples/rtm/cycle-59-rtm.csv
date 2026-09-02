@@ -1,0 +1,27 @@
+requirement_key,risk_keys,feature,test_case_ids,owner,result
+REQ-RBAC-01,RSK-ISO-01,Tenant isolation of evidence,TC-RBAC-001;TC-RBAC-003;TC-RBAC-004,Maya Chen,planned
+REQ-RBAC-02,RSK-ISO-01,Role matrix Investigator download,TC-RBAC-002,Maya Chen,planned
+REQ-RBAC-03,RSK-ISO-01;RSK-ISO-02,Cross-tenant UUID returns 404,TC-RBAC-003;TC-RBAC-004;TC-RBAC-005,Maya Chen,planned
+REQ-RBAC-04,RSK-RBAC-01,No self-elevation to Admin,TC-RBAC-007,Maya Chen,planned
+REQ-RBAC-05,RSK-RBAC-01,Read-only cannot download original,TC-RBAC-006,Maya Chen,planned
+REQ-RBAC-06,RSK-EXP-01,Reporter assigned cases only,TC-RBAC-010;TC-EXP-002,Maya Chen,planned
+REQ-RBAC-07,RSK-EXP-01,Investigator denied bulk export,TC-EXP-003,Luis Ortega,planned
+REQ-RBAC-08,RSK-RBAC-02,Revoked role stale token,TC-RBAC-008,Maya Chen,planned
+REQ-INT-01,RSK-INT-01,Server hash and size on ingest,TC-INT-001;TC-INT-004,Luis Ortega,planned
+REQ-INT-02,RSK-INT-01,Truncated upload rejected,TC-INT-003,Luis Ortega,planned
+REQ-INT-03,RSK-INT-01,Hash mismatch rejected,TC-INT-002,Luis Ortega,planned
+REQ-INT-04,RSK-INT-02,Chain of custody events,TC-INT-005,Luis Ortega,planned
+REQ-INT-05,RSK-INT-02,Bytes immutable after ingest,TC-INT-006,Luis Ortega,planned
+REQ-AUD-01,RSK-AUD-01,Successful access audited,TC-AUD-001,Luis Ortega,planned
+REQ-AUD-02,RSK-AUD-01,Denied access audited,TC-AUD-002;TC-AUD-003,Luis Ortega,planned
+REQ-AUD-03,RSK-AUD-02,Audit append-only,TC-AUD-004,Luis Ortega,planned
+REQ-AUD-04,RSK-AUD-01,Audit required fields,TC-AUD-001,Luis Ortega,planned
+REQ-EXP-01,RSK-EXP-01,Admin only bulk export,TC-EXP-001;TC-EXP-003,Luis Ortega,planned
+REQ-EXP-02,RSK-EXP-01,Reporter assigned-case export,TC-EXP-002,Luis Ortega,planned
+REQ-EXP-03,RSK-EXP-01,Export tenant-scoped,TC-EXP-001,Luis Ortega,planned
+REQ-EXP-04,RSK-EXP-02,Export includes SHA-256,TC-EXP-001,Luis Ortega,planned
+REQ-API-01,RSK-API-01,JWT tenant_id only,TC-RBAC-009,Maya Chen,planned
+REQ-API-02,RSK-API-01,Role claim vs action,TC-RBAC-003;TC-RBAC-006,Maya Chen,planned
+REQ-API-03,RSK-API-01,Missing token 401,TC-API-001,Luis Ortega,planned
+REQ-UAT-01,RSK-UAT-01,UAT executable in four regions,TC-UAT-001;TC-UAT-002;TC-UAT-003;TC-UAT-004,Fabian Velasquez,planned
+REQ-UAT-02,RSK-UAT-01,Evidence remains in home region,TC-UAT-001;TC-UAT-002;TC-UAT-003;TC-UAT-004,Fabian Velasquez,planned

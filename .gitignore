@@ -1,0 +1,24 @@
+# Generated outputs (keep folder, drop drafts)
+out/*
+!out/README.md
+!out/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key
