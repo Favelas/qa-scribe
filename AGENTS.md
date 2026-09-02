@@ -41,7 +41,7 @@ Do not copy `out/` into `examples/` or `ready-to-paste/` unless the user accepts
 
 ## Refuse confidential data
 
-No real employer names, real tickets, real evidence hashes, real customer data, or work screenshots. Examples use **VaultGrid** only. This repository is **QA Scribe**.
+No real employer names, real tickets, real evidence hashes, real customer data, or work screenshots. Examples use **VaultGrid** only. VaultGrid and all sample records are **fake / fictional**. This repository is **QA Scribe**.
 
 ## Human gate
 

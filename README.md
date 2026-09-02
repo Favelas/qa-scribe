@@ -2,6 +2,9 @@
 
 AI-assisted QA documentation accelerator: Cursor project skills, named ISO/IEEE/ISTQB templates, VaultGrid golden examples, and a skill-rewrite learning loop — so a Senior QA Analyst spends time on permissions, isolation, integrity, audit, and UAT, not on blank-page writing.
 
+> **Fake product. Fake data.**  
+> **VaultGrid** is a fictional digital-evidence vault built only for this portfolio. Tenants (NORTHWIND, GLOBEX), users, roles, cases, files, hashes, UUIDs, defect IDs, hours, and dates are **invented examples**. Nothing here is a real investigation, a real customer, or a real employer system. Do not treat it as production evidence.
+
 Goldens are stamped **Draft — human sign-off required** on purpose. AI drafts; a named QA role still signs. That mark is the control, not an unfinished repository.
 
 **Fabian Velasquez** — Senior QA Analyst / Senior Functional QA Specialist / Senior Software Testing Engineer.  
@@ -19,6 +22,8 @@ Thesis: AI drafts; named standards constrain headings and fields; a human owns r
 > 5. **[examples/reports/cycle-59-completion.md](examples/reports/cycle-59-completion.md)** — you report residual risk, not a fake green dashboard.
 >
 > One case if you only open one: **TC-RBAC-004** (cross-tenant 404) in this README.
+>
+> Two more minutes (interview plus): **[defect write-up DEF-C59-004](examples/defects/def-c59-004-truncated-ingest.md)** (how a High integrity bug is reported) and **[US UAT script](examples/uat/us-uat-script.md)** (business-facing acceptance). Both use fake data only.
 
 | Intake | Output | Standard(s) |
 | --- | --- | --- |
@@ -32,7 +37,8 @@ Thesis: AI drafts; named standards constrain headings and fields; a human owns r
 
 ### Not this
 
-- Not employer assets, real tickets, real evidence hashes, or customer data
+- Not a real product, real investigation, or real customer dataset — **VaultGrid and all sample data are fake**
+- Not employer assets, real tickets, real evidence hashes, or production URLs
 - Not an autonomous tester and not TestRail/Xray as a product
 - Not a hosted SaaS or a multi-tenant testing platform
 
@@ -48,7 +54,7 @@ Human gate: every generated file is **Draft — human sign-off required** until 
 
 ## Generate documentation for *your* project
 
-VaultGrid is a **worked example**. Do not ship VaultGrid names, REQ IDs, or people as if they were yours. Replace them with your product’s facts.
+VaultGrid is a **fictional worked example with fake data**. Do not ship VaultGrid names, REQ IDs, or people as if they were yours. Replace them with your product’s facts.
 
 1. **Pick the document you need** (one at a time — never mix strategy and plan):
 
@@ -154,7 +160,7 @@ Full pack: [`examples/cases/rbac-tenant-isolation.md`](examples/cases/rbac-tenan
 standards/          Principles, citation map, templates, rubrics, ID schemes
 product/            VaultGrid brief, requirements, RBAC matrix, risks
 inputs/examples/    YAML intake for each generator
-examples/           Golden strategy, plan, cases, prompts, reports, RTM
+examples/           Golden strategy, plan, cases, prompts, reports, RTM, defect, UAT
 ready-to-paste/     Confluence-cleaned copies of the best goldens
 learnings/          Bootstrap note, changelog, future improve notes
 out/                Generated drafts (gitignored except README)
@@ -162,9 +168,11 @@ scripts/            Optional intake YAML validator
 AGENTS.md           Rules for future agents
 ```
 
-## NDA disclaimer
+## NDA and fake-data disclaimer
 
-VaultGrid, NORTHWIND, GLOBEX, all hashes, UUIDs, defect IDs, and people in examples are **fictional**. Do not paste real investigation data, real customer names, or employer artefacts into this repository. If intake looks confidential, stop and fictionalise.
+**All of it is fake.** VaultGrid is not a real system. NORTHWIND, GLOBEX, every person name in the examples, every hash, UUID, case id, defect id, timestamp, and hour figure is **synthetic portfolio data**. This repository is not connected to a live investigation, a live customer, or an employer’s confidential programme.
+
+Do not paste real evidence, real customer names, real tickets, or production URLs into this repository. If your own intake looks confidential, stop and fictionalise before you generate.
 
 ## Author
 

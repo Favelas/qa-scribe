@@ -19,9 +19,9 @@
 
 ## 1. What VaultGrid is
 
-VaultGrid is a **fictional** multi-tenant digital-evidence vault. Investigation teams store files, hash records, chain-of-custody events, and case-scoped reports. Tenants are organisations (for example a municipal police force, a law firm, or a corporate incident-response unit). A tenant never shares evidence objects, users, or audit streams with another tenant.
+VaultGrid is a **fictional** multi-tenant digital-evidence vault (**fake product, fake data**). Investigation teams store files, hash records, chain-of-custody events, and case-scoped reports. Tenants are organisations (for example a municipal police force, a law firm, or a corporate incident-response unit). A tenant never shares evidence objects, users, or audit streams with another tenant.
 
-This repository uses VaultGrid so QA documents can be public. It is not a real product and contains no real evidence.
+This repository uses VaultGrid so QA documents can be public. It is not a real product, not a real investigation, and contains no real evidence.
 
 ## 2. Isolation model
 
