@@ -20,6 +20,7 @@
 | `vaultgrid-strategy.md` | `examples/strategy/vaultgrid-strategy.md` |
 | `cycle-59-plan.md` | `examples/plan/cycle-59-plan.md` |
 | `rbac-tenant-isolation.md` | `examples/cases/rbac-tenant-isolation.md` |
+| `why-404-not-403.md` | `examples/cases/why-404-not-403.md` |
 | `hash-chain-of-custody.md` | `examples/cases/hash-chain-of-custody.md` |
 | `rbac-design-prompts.md` | `examples/prompts/rbac-design-prompts.md` |
 | `cycle-59-status.md` | `examples/reports/cycle-59-status.md` |
