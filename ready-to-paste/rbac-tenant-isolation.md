@@ -21,6 +21,8 @@ Priority mapping: Critical risk → 1; High → 2; Medium → 3; Low → 4. Case
 
 Environment (all cases unless noted): Test class, build vaultgrid-2026.59.x, tenants NORTHWIND and GLOBEX, Chromium + API client.
 
+**403 vs 404 (read this once):** Inside NORTHWIND, wrong role on a NORTHWIND file → **403** (the file is real; your role cannot do that). A NORTHWIND user asking for a **GLOBEX** file ID → **404** (do not confirm the other company has that file). See `examples/cases/why-404-not-403.md`.
+
 ---
 
 ### TC-RBAC-001 — Admin cannot read GLOBEX evidence via UI search

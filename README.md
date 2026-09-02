@@ -21,7 +21,7 @@ Thesis: AI drafts; named standards constrain headings and fields; a human owns r
 > 4. **[examples/cases/rbac-tenant-isolation.md](examples/cases/rbac-tenant-isolation.md)** — you design isolation / negative cases.  
 > 5. **[examples/reports/cycle-59-completion.md](examples/reports/cycle-59-completion.md)** — you report residual risk, not a fake green dashboard.
 >
-> One case if you only open one: **TC-RBAC-004** (cross-tenant 404) in this README.
+> One case if you only open one: **TC-RBAC-004** (cross-tenant 404) in this README. If 403 vs 404 is unclear, read **[Why 404, not 403?](examples/cases/why-404-not-403.md)** first (plain English).
 >
 > Two more minutes (interview plus): **[defect write-up DEF-C59-004](examples/defects/def-c59-004-truncated-ingest.md)** (how a High integrity bug is reported) and **[US UAT script](examples/uat/us-uat-script.md)** (business-facing acceptance). Both use fake data only.
 
@@ -122,6 +122,8 @@ risks_this_cycle:
 ```
 
 ## Sample case — cross-tenant Read-only (ROLE-MATRIX / NEG)
+
+**403 vs 404 in one breath:** 403 = “that file exists in *your* company; your job is not allowed.” 404 = “we will not confirm any file with that ID.” For another company’s ID we want **404**, so a guessed ID does not reveal that GLOBEX has a file. Same-company Read-only download is **403** (TC-RBAC-006). Full note: [`examples/cases/why-404-not-403.md`](examples/cases/why-404-not-403.md).
 
 Full pack: [`examples/cases/rbac-tenant-isolation.md`](examples/cases/rbac-tenant-isolation.md). Identifier **TC-RBAC-004**.
 
