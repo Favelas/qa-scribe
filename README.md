@@ -2,10 +2,25 @@
 
 AI-assisted QA documentation accelerator: Cursor project skills, named ISO/IEEE/ISTQB templates, VaultGrid golden examples, and a skill-rewrite learning loop — so a Senior QA Analyst spends time on permissions, isolation, integrity, audit, and UAT, not on blank-page writing.
 
+Goldens are stamped **Draft — human sign-off required** on purpose. AI drafts; a named QA role still signs. That mark is the control, not an unfinished repository.
+
 **Fabian Velasquez** — Senior QA Analyst / Senior Functional QA Specialist / Senior Software Testing Engineer.  
 Work is mainly **manual functional QA** on security-sensitive enterprise SaaS: multi-tenant RBAC, customer data isolation, integrity/hashing, audit logs, API authorisation, multi-region UAT.  
 Playwright and Postman are supporting skills, not this product.  
 Thesis: AI drafts; named standards constrain headings and fields; a human owns risk ranking, severity, and sign-off.
+
+### Recruiter fast path (about five minutes)
+
+Read these four files in order. They are the portfolio. Skip folders until these make sense.
+
+| # | Open | What it proves |
+| --- | --- | --- |
+| 1 | This README | Positioning and the five generators |
+| 2 | [VaultGrid test strategy](examples/strategy/vaultgrid-strategy.md) | Strategy ≠ plan. No sprint dates or tester hours |
+| 3 | [Cycle 59 test plan](examples/plan/cycle-59-plan.md) | IEEE 829: names, hours, deadline, RTM, approvals |
+| 4 | [RBAC isolation cases](examples/cases/rbac-tenant-isolation.md) then [completion report](examples/reports/cycle-59-completion.md) | Permission-bypass design; residual High risk named (go-with-risks, not fake all-green) |
+
+If you only open one case, use **TC-RBAC-004** (cross-tenant 404) in the README below.
 
 | Intake | Output | Standard(s) |
 | --- | --- | --- |
@@ -17,29 +32,45 @@ Thesis: AI drafts; named standards constrain headings and fields; a human owns r
 
 **Principle:** AI drafts. Named standards shape headings and fields. The tester owns risk and sign-off. High-priority risks get depth first.
 
-### Read these first (no install)
-
-- [VaultGrid test strategy](examples/strategy/vaultgrid-strategy.md)
-- [Cycle 59 test plan](examples/plan/cycle-59-plan.md)
-- [RBAC / tenant isolation cases](examples/cases/rbac-tenant-isolation.md)
-- [Cycle 59 completion report](examples/reports/cycle-59-completion.md)
-
 ### Not this
 
 - Not employer assets, real tickets, real evidence hashes, or customer data
 - Not an autonomous tester and not TestRail/Xray as a product
-- Not CoreCheck (a different project) and not a hosted SaaS tenant
-- Not a multi-tenant testing platform
+- Not a hosted SaaS or a multi-tenant testing platform
 
 ---
 
-## How to use immediately
+## How to use immediately (VaultGrid examples)
 
 1. **Copy** a cleaned example from [`ready-to-paste/`](ready-to-paste/) into Confluence, Jira, or an email to Product.
 2. **Fill intake** from [`inputs/examples/`](inputs/examples/) (or paste YAML into chat). Do not invent names, dates, hours, or requirement IDs. Optional: `python3 scripts/validate_intake.py inputs/examples/plan.cycle-59.yaml`.
 3. **Ask Cursor** to use the named skill, for example: *Use `qa-scribe-plan` with this YAML* (skills live under [`.cursor/skills/`](.cursor/skills/)). Write drafts to `out/` with generator name and skill version.
 
 Human gate: every generated file is **Draft — human sign-off required** until a QA Analyst, QA Manager, or named approver verifies it.
+
+## Generate documentation for *your* project
+
+VaultGrid is a **worked example**. Do not ship VaultGrid names, REQ IDs, or people as if they were yours. Replace them with your product’s facts.
+
+1. **Pick the document you need** (one at a time — never mix strategy and plan):
+
+   | You need | Skill to name in Cursor |
+   | --- | --- |
+   | How we test this product over months | `qa-scribe-strategy` |
+   | How *this cycle* gets out the door | `qa-scribe-plan` |
+   | Cases to execute / import to Xray | `qa-scribe-cases` |
+   | A contract so later cases stay on-standard | `qa-scribe-prompts` |
+   | In-cycle status or end-of-cycle summary | `qa-scribe-report` |
+
+2. **Collect intake. Do not invent.** Copy the matching file under `inputs/examples/`, then replace values with *your* product name, requirements (`REQ-…`), risks (`RSK-…`), environments, and — for a plan — **real** names, hours, and dates. If a field is unknown, leave it blank and say so. `qa-scribe-intake` must ask for missing keys rather than fabricate them. Optional check: `python3 scripts/validate_intake.py path/to/your.yaml`.
+
+3. **Open this repo in Cursor** (clone or add the skills). Paste the YAML and ask: *Use `qa-scribe-<type>` with this intake. Write the draft under `out/`.* If the YAML is incomplete, the intake skill runs first.
+
+4. **Review like a sign-off, not like a spellcheck.** Use `standards/rubrics/<type>.md`. Confirm traces, risk order, and that strategy still has no cycle calendar. Edit the draft. When a generation is wrong, run `qa-scribe-improve` with your critique so the skill gains a rule — never lower the rubric to make drafting easier.
+
+5. **Paste, then a human signs.** Copy from `out/` (or a cleaned Markdown) into Confluence, Jira, or Xray. Change Status from Draft only after a QA Analyst, QA Manager, or the named approver in the plan has verified the document. AI does not authorise execution or release.
+
+Confidentiality: fictionalise or omit real customer names, evidence hashes, and ticket keys before they enter this repo or a chat. Learnings files stay NDA-safe.
 
 ## Learning loop
 

@@ -78,7 +78,6 @@ Home-region deployments used in examples: **US** (Virginia), **UK** (London), **
 
 - Not a test strategy, test plan, or set of test cases.
 - Not an employer system. Do not paste real hashes, customer names, or production URLs into this file.
-- Not CoreCheck or any other portfolio product.
 
 ## 10. Source files for generators
 

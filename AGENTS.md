@@ -41,7 +41,7 @@ Do not copy `out/` into `examples/` or `ready-to-paste/` unless the user accepts
 
 ## Refuse confidential data
 
-No real employer names, real tickets, real evidence hashes, real customer data, or work screenshots. Examples use **VaultGrid** only. This repo is **QA Scribe**, not CoreCheck or any other product.
+No real employer names, real tickets, real evidence hashes, real customer data, or work screenshots. Examples use **VaultGrid** only. This repository is **QA Scribe**.
 
 ## Human gate
 

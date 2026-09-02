@@ -22,7 +22,7 @@ These rules are already in the v1.0.0 skills (not a later patch):
 4. Reports: flavour A status ≠ flavour B completion. Completion recommendation is go / go-with-risks / no-go. Residual High must be named; no fake 100% green.
 5. Intake refuses to invent requirements, dates, or team names.
 6. Improve loop writes dated learnings, patches the skill, changelogs semver, re-checks goldens, never lowers the bar, never stores client data.
-7. Fictional product is **VaultGrid** only. Repo name is **QA Scribe**. Not CoreCheck.
+7. Fictional product is **VaultGrid** only. Repository name is **QA Scribe**.
 
 ## Better excerpt
 
