@@ -1,7 +1,7 @@
 # Plan skill — examples
 
-Golden plan: `examples/plan/cycle-59-plan.md`.  
-Golden RTM: `examples/rtm/cycle-59-rtm.csv`.
+Golden plan: `docs/plan.md`.  
+Golden RTM: `docs/rtm.csv`.
 
 ## Excerpt — staffing (acceptable)
 
@@ -17,4 +17,4 @@ Cycle deadline: 3 October 2026 17:00 UTC — go / go-with-risks / no-go meeting.
 
 ## Ready-to-paste
 
-`ready-to-paste/cycle-59-plan.md`
+`docs/plan.md`

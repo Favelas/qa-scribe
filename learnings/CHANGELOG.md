@@ -11,3 +11,4 @@ Skill family starts at **v1.0.0**. Append only. No employer/client data.
 | 2026-09-02 | qa-scribe-prompts | 1.0.0 | Initial skill: generator contract, not testware | Bootstrap — further cases stay on-standard |
 | 2026-09-02 | qa-scribe-report | 1.0.0 | Initial skill: status vs completion; risk slice; no fake all-green | Bootstrap — residual High must remain visible |
 | 2026-09-02 | qa-scribe-improve | 1.0.0 | Initial learning loop: score, dated note, patch, changelog, golden re-check | Bootstrap — skills improve without lowering the bar |
+| 2026-09-02 | all generators | 1.0.0 | Goldens moved to `docs/`; UI isolation and role buttons; stopper vs not-a-stopper defects | Same standards, smaller human-facing set |

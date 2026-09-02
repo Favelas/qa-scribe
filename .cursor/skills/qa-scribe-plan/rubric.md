@@ -2,7 +2,7 @@
 
 Canonical scored rubric: `standards/rubrics/plan.md`.
 
-Human still signs. VaultGrid example: `examples/plan/cycle-59-plan.md`.
+Human still signs. VaultGrid example: `docs/plan.md`.
 
 Immediate fail:
 

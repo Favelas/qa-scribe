@@ -4,7 +4,7 @@ Use with `.cursor/skills/qa-scribe-prompts/SKILL.md`. Skill version 1.0.0.
 
 ## Contract test
 
-A competent agent given **only** the prompt pack plus `product/requirements.md`, `product/risks.md`, and `product/rbac-matrix.md` should emit cases with the same field layout as `examples/cases/rbac-tenant-isolation.md`. If the prompt omits expected outcomes or traces, the contract is broken.
+A competent agent given **only** the prompt pack plus `docs/requirements.md`, `docs/risks.md`, and `docs/roles.md` should emit cases with the same field layout as `docs/cases.md`. If the prompt omits expected outcomes or traces, the contract is broken.
 
 ## Forbidden outputs (minimum list)
 
@@ -12,4 +12,4 @@ Always include: vague steps; mixed features; missing expected result; missing RE
 
 ## Golden regression
 
-`examples/prompts/rbac-design-prompts.md` must still force ROLE-MATRIX, NEG, and the 404-not-403 cross-tenant rule.
+`docs/prompts.md` must still force ROLE-MATRIX, NEG, and UI isolation (Company A must not see Company B titles).

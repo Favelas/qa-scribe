@@ -80,8 +80,8 @@ Plus defect summary and UAT by region when data exists.
 
 ## VaultGrid worked examples
 
-- `examples/reports/cycle-59-status.md`
-- `examples/reports/cycle-59-completion.md` (go-with-risks, leftover High RSK-EXP-01)
+- `docs/report-status.md`
+- `docs/report-completion.md` (go-with-risks, leftover High RSK-RBAC-03)
 - Intake: `inputs/examples/report.cycle-59.yaml`
 
 ## After user corrections

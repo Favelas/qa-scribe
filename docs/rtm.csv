@@ -1,0 +1,11 @@
+requirement_key,risk_keys,feature,test_case_ids,owner,result
+REQ-ISO-01,RSK-ISO-01,Search isolation,TC-ISO-001,Maya Chen,planned
+REQ-RBAC-01,RSK-RBAC-01,Read-only no Upload,TC-RBAC-001,Maya Chen,planned
+REQ-RBAC-02,RSK-RBAC-01,Investigator Upload,TC-RBAC-002,Maya Chen,planned
+REQ-RBAC-03,RSK-RBAC-02,Investigator no Manage users,TC-RBAC-003,Maya Chen,planned
+REQ-RBAC-04,RSK-RBAC-02,Admin Manage users,TC-RBAC-004,Maya Chen,planned
+REQ-AUTH-01,RSK-ISO-01,Valid login,TC-AUTH-001,Maya Chen,planned
+REQ-AUTH-02,RSK-RBAC-01,Wrong password,TC-AUTH-002,Maya Chen,planned
+REQ-VAL-01,RSK-VAL-01,Empty title,TC-VAL-001,Maya Chen,planned
+REQ-RBAC-05,RSK-RBAC-03,Read-only no Export,TC-RBAC-005,Maya Chen,planned
+REQ-AUD-01,RSK-AUD-01,Activity log,TC-AUD-001,Maya Chen,planned

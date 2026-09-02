@@ -2,7 +2,7 @@
 
 Canonical scored rubric: `standards/rubrics/report.md`.
 
-Human still signs. Goldens under `examples/reports/`.
+Human still signs. Goldens under `docs/`.
 
 Immediate fail:
 

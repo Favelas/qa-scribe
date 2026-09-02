@@ -25,8 +25,8 @@
 | Prompt pack | `PRM-<AREA>-<nnn>` | `PRM-RBAC-001` | Generator contract, not testware |
 | Status report | `RPT-STS-<PRODUCT>-<cycle>-<nnn>` | `RPT-STS-VAULTGRID-C59-001` | In-cycle |
 | Completion / summary report | `RPT-SUM-<PRODUCT>-<cycle>-<nnn>` | `RPT-SUM-VAULTGRID-C59-001` | End of cycle |
-| Requirement | `REQ-<AREA>-<nnn>` | `REQ-RBAC-03` | From intake / `product/requirements.md` |
-| Product risk | `RSK-<AREA>-<nnn>` | `RSK-ISO-01` | From intake / `product/risks.md` |
+| Requirement | `REQ-<AREA>-<nnn>` | `REQ-ISO-01` | From intake / `docs/requirements.md` |
+| Product risk | `RSK-<AREA>-<nnn>` | `RSK-ISO-01` | From intake / `docs/risks.md` |
 | Defect (examples) | `DEF-<cycle>-<nnn>` | `DEF-C59-012` | Fictional; IEEE 1044 category + severity when listed |
 
 ## Area codes

@@ -43,7 +43,7 @@ Mixing strategy and plan is a **fail**. If the user asks for “a test plan with
 
 ## 4. Traceability
 
-- Cases trace to `REQ-` and `RSK-` IDs from intake (VaultGrid: `product/requirements.md`, `product/risks.md`).
+- Cases trace to `REQ-` and `RSK-` IDs from intake (VaultGrid: `docs/requirements.md`, `docs/risks.md`).
 - Plans include a requirements traceability matrix (RTM).
 - Do not invent requirement IDs, dates, or people’s names. Collect them with `qa-scribe-intake`.
 

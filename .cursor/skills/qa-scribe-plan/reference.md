@@ -30,4 +30,4 @@ Resumption: new build number, defect verified, environment health check signed b
 
 ## Golden regression
 
-`examples/plan/cycle-59-plan.md` must retain all 15 IEEE sections, a deadline, named hours, RTM, and approvals. After skill edits, re-read those headings.
+`docs/plan.md` must retain all 15 IEEE sections, a deadline, named hours, RTM, and approvals. After skill edits, re-read those headings.

@@ -2,7 +2,7 @@
 
 Canonical scored rubric: `standards/rubrics/strategy.md`.
 
-Human still signs. VaultGrid example: `examples/strategy/vaultgrid-strategy.md`.
+Human still signs. VaultGrid example: `docs/strategy.md`.
 
 Immediate fail:
 

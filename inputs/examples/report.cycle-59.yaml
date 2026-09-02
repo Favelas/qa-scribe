@@ -1,6 +1,3 @@
-# VaultGrid Cycle 59 report intake
-# Set flavour to status or completion. Paste into chat and invoke qa-scribe-report.
-
 document: report
 confidential: false
 product_name: VaultGrid
@@ -11,58 +8,22 @@ strategy_id: STR-VAULTGRID-001
 flavour: completion
 cycle_end: 2026-10-03T17:00:00Z
 as_of: 2026-10-01T17:00:00Z
-builds:
-  - vaultgrid-2026.59.0
-  - vaultgrid-2026.59.1
-  - vaultgrid-2026.59.2
+builds: [vaultgrid-2026.59.1, vaultgrid-2026.59.2]
 counts_by_risk:
-  critical: { planned: 8, executed: 8, passed: 8, failed: 0, blocked: 0, not_run: 0 }
-  high: { planned: 12, executed: 12, passed: 11, failed: 0, blocked: 0, not_run: 0 }
-  medium: { planned: 5, executed: 5, passed: 5, failed: 0, blocked: 0, not_run: 0 }
-  low: { planned: 1, executed: 1, passed: 1, failed: 0, blocked: 0, not_run: 0 }
+  critical: { planned: 2, executed: 2, passed: 2, failed: 0, blocked: 0, not_run: 0 }
+  high: { planned: 5, executed: 5, passed: 4, failed: 0, blocked: 0, not_run: 0 }
+  medium: { planned: 2, executed: 2, passed: 2, failed: 0, blocked: 0, not_run: 0 }
+  low: { planned: 1, executed: 1, passed: 0, failed: 0, blocked: 0, not_run: 0 }
 open_crit_high: []
 residual_product_high:
-  - id: RSK-EXP-01
-    summary: Reporter export still includes investigator notes (no notes ACL)
-    compensating_control: Admin reviews export templates until Cycle 60
+  - id: RSK-RBAC-03
+    summary: Read-only still sees Export; click denied; no file
+    compensating_control: Hide button in Cycle 60
     owner: Priya Shah
 req_gaps: []
-hours_planned: 204
-hours_actual: 198
-hours_by_person:
-  - { name: Fabian Velasquez, planned: 32, actual: 34 }
-  - { name: Maya Chen, planned: 40, actual: 38 }
-  - { name: Luis Ortega, planned: 40, actual: 41 }
-  - { name: Priya Shah, planned: 12, actual: 10 }
-  - { name: Tomas Novak, planned: 8, actual: 11 }
-  - { name: Amina Diallo, planned: 8, actual: 6 }
-  - { name: Jordan Hale, planned: 16, actual: 14 }
-  - { name: Elena Rossi, planned: 16, actual: 14 }
-  - { name: Rafael Costa, planned: 16, actual: 15 }
-  - { name: Sophie Nguyen, planned: 16, actual: 15 }
-defects:
-  - id: DEF-C59-004
-    summary: Truncated upload sometimes stored partial object
-    severity: High
-    ieee1044_category: Data
-    status: Closed
-  - id: DEF-C59-006
-    summary: Bulk export worker crash on Test
-    severity: Medium
-    ieee1044_category: Interface
-    status: Closed
-regions_uat:
-  - { region: US, role: Investigator+Admin, remaining: none, result: complete, coordinator: Jordan Hale }
-  - { region: UK, role: Investigator+Admin, remaining: none, result: complete, coordinator: Elena Rossi }
-  - { region: Brazil, role: Investigator+Admin, remaining: none, result: complete, coordinator: Rafael Costa }
-  - { region: Australia, role: Investigator+Admin, remaining: none, result: complete, coordinator: Sophie Nguyen }
+hours_planned: 78
+hours_actual: 76
 recommendation: go-with-risks
 recommendation_rationale: >
-  No open Critical. Isolation and ingest integrity met on 2026.59.2.
-  RSK-EXP-01 remains High with compensating control.
-variances:
-  - Export blocked until 23 Sep; executed 24 Sep
-  - Notes ACL not delivered (planned deferral)
-# For an in-cycle status report, copy this file, set flavour: status,
-# as_of to the cut date, and replace counts with the status-cut numbers
-# from examples/reports/cycle-59-status.md. Do not include recommendation.
+  Stopper DEF-STOP-01 closed on 59.2. RSK-RBAC-03 remains High leftover.
+  DEF-NS-01 is not a stopper.

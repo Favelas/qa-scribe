@@ -1,6 +1,6 @@
 # Prompts skill — examples
 
-Golden: `examples/prompts/rbac-design-prompts.md`.
+Golden: `docs/prompts.md`.
 
 ## Excerpt — acceptable forbidden line
 
@@ -12,4 +12,4 @@ Do not emit a single case titled “RBAC end-to-end”. Split by action × role 
 
 ## Ready-to-paste
 
-`ready-to-paste/rbac-design-prompts.md`
+`docs/rbac-design-prompts.md`

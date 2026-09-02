@@ -2,14 +2,14 @@
 
 Goldens:
 
-- `examples/cases/rbac-tenant-isolation.md`
-- `examples/cases/hash-chain-of-custody.md`
-- `examples/cases/audit-log.md`
-- `examples/cases/export.csv`
+- `docs/cases.md`
+- `docs/cases.md`
+- `docs/cases.md`
+- `docs/cases.csv`
 
 ## Excerpt — acceptable cross-tenant objective
 
-Confirm that an Investigator in tenant NORTHWIND, presenting a valid evidence UUID that belongs to tenant GLOBEX, receives HTTP 404 with no metadata, and that an audit event with outcome deny is written for NORTHWIND.
+Confirm that a NORTHWIND user searching `GLOBEX-CASE-RED` sees zero rows.
 
 ## Excerpt — fail
 
@@ -17,4 +17,4 @@ Confirm that an Investigator in tenant NORTHWIND, presenting a valid evidence UU
 
 ## Ready-to-paste
 
-`ready-to-paste/rbac-tenant-isolation.md`
+`docs/cases.md`

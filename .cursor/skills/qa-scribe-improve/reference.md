@@ -23,7 +23,7 @@ Use with `.cursor/skills/qa-scribe-improve/SKILL.md`. Skill version 1.0.0.
 
 - [ ] Strategy hours/deadline still absent
 - [ ] Plan still has 15 sections, dates, hours, RTM
-- [ ] Cases still have bypass + hash mismatch
+- [ ] Cases still have isolation search + role buttons
 - [ ] Status ≠ completion
 ```
 
