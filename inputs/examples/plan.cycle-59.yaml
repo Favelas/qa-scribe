@@ -1,0 +1,188 @@
+# VaultGrid Cycle 59 plan intake
+# Paste into chat and invoke qa-scribe-plan.
+# Required: dates, named people, hours, requirements for RTM.
+
+document: plan
+confidential: false
+product_name: VaultGrid
+author_role: Senior QA Analyst
+cycle_id: Cycle 59
+strategy_id: STR-VAULTGRID-001
+plan_id: PLN-VAULTGRID-C59-001
+test_items:
+  - name: VaultGrid API
+    version: vaultgrid-2026.59.x
+  - name: VaultGrid web UI
+    version: vaultgrid-2026.59.x
+  - name: Regional UAT stacks
+    version: US-uat, UK-uat, BR-uat, AU-uat
+features_in:
+  - REQ-RBAC-01
+  - REQ-RBAC-02
+  - REQ-RBAC-03
+  - REQ-RBAC-04
+  - REQ-RBAC-05
+  - REQ-RBAC-06
+  - REQ-RBAC-07
+  - REQ-RBAC-08
+  - REQ-INT-01
+  - REQ-INT-02
+  - REQ-INT-03
+  - REQ-INT-04
+  - REQ-INT-05
+  - REQ-AUD-01
+  - REQ-AUD-02
+  - REQ-AUD-03
+  - REQ-AUD-04
+  - REQ-EXP-01
+  - REQ-EXP-02
+  - REQ-EXP-03
+  - REQ-EXP-04
+  - REQ-API-01
+  - REQ-API-02
+  - REQ-API-03
+  - REQ-UAT-01
+  - REQ-UAT-02
+features_out:
+  - id: notes-acl
+    reason: Deferred to Cycle 60
+    residual_risk: RSK-EXP-01
+  - id: performance-over-5gb
+    reason: No NFR in catalogue
+    residual_risk: null
+entry_exit_this_cycle:
+  entry:
+    - Build on Test class with version id
+    - Two tenants four roles
+    - Audit readable by Admin
+  exit:
+    - No open Severity 1
+    - Crit isolation and integrity cases executed
+    - UAT four regions signed or waived
+    - Residual High named on completion report
+people:
+  - name: Fabian Velasquez
+    role: Senior QA Analyst
+    owns: Plan, design quality, reports, UAT facilitation
+    hours: 32
+  - name: Maya Chen
+    role: QA Analyst
+    owns: RBAC and isolation execution
+    hours: 40
+  - name: Luis Ortega
+    role: QA Analyst
+    owns: Integrity, audit, API, export execution
+    hours: 40
+  - name: Priya Shah
+    role: Product Owner
+    owns: Scope and residual risk acceptance
+    hours: 12
+  - name: Tomas Novak
+    role: Engineering Lead
+    owns: Builds, environment, triage
+    hours: 8
+  - name: Amina Diallo
+    role: Security Champion
+    owns: Authz/integrity severity consult
+    hours: 8
+  - name: Jordan Hale
+    role: US UAT coordinator
+    owns: US UAT
+    hours: 16
+  - name: Elena Rossi
+    role: UK UAT coordinator
+    owns: UK UAT
+    hours: 16
+  - name: Rafael Costa
+    role: Brazil UAT coordinator
+    owns: BR UAT
+    hours: 16
+  - name: Sophie Nguyen
+    role: Australia UAT coordinator
+    owns: AU UAT
+    hours: 16
+  - name: Nadia Okonkwo
+    role: QA Manager
+    owns: Plan approval
+    hours: 0
+schedule:
+  design_start: 2026-09-08
+  design_end: 2026-09-12
+  execution_start: 2026-09-15
+  execution_end: 2026-09-26
+  exit_review: 2026-10-02
+  cycle_deadline: 2026-10-03T17:00:00Z
+regions:
+  - US
+  - UK
+  - Brazil
+  - Australia
+uat_windows:
+  - region: US
+    start: 2026-09-22
+    end: 2026-09-24
+    coordinator: Jordan Hale
+  - region: UK
+    start: 2026-09-23
+    end: 2026-09-25
+    coordinator: Elena Rossi
+  - region: Brazil
+    start: 2026-09-24
+    end: 2026-09-26
+    coordinator: Rafael Costa
+  - region: Australia
+    start: 2026-09-28
+    end: 2026-09-30
+    coordinator: Sophie Nguyen
+risks_this_cycle:
+  - id: RSK-ISO-01
+    mitigation: Execute cross-tenant cases before UAT; Sev 1 suspends
+    test_refs: [TC-RBAC-003, TC-RBAC-004]
+  - id: RSK-ISO-02
+    mitigation: Compare foreign vs unknown UUID
+    test_refs: [TC-RBAC-005]
+  - id: RSK-INT-01
+    mitigation: Hash-mismatch and truncate on execution day 1
+    test_refs: [TC-INT-002, TC-INT-003]
+  - id: RSK-RBAC-02
+    mitigation: State-transition after revoke
+    test_refs: [TC-RBAC-008]
+  - id: RSK-AUD-01
+    mitigation: Pair 403/404 with audit assertion
+    test_refs: [TC-AUD-002]
+  - id: RSK-EXP-01
+    mitigation: Test assignment scope; accept residual High if notes ACL absent
+    test_refs: [TC-EXP-002]
+requirements:
+  - REQ-RBAC-01
+  - REQ-RBAC-02
+  - REQ-RBAC-03
+  - REQ-RBAC-04
+  - REQ-RBAC-05
+  - REQ-RBAC-06
+  - REQ-RBAC-07
+  - REQ-RBAC-08
+  - REQ-INT-01
+  - REQ-INT-02
+  - REQ-INT-03
+  - REQ-INT-04
+  - REQ-INT-05
+  - REQ-AUD-01
+  - REQ-AUD-02
+  - REQ-AUD-03
+  - REQ-AUD-04
+  - REQ-EXP-01
+  - REQ-EXP-02
+  - REQ-EXP-03
+  - REQ-EXP-04
+  - REQ-API-01
+  - REQ-API-02
+  - REQ-API-03
+  - REQ-UAT-01
+  - REQ-UAT-02
+tools:
+  - Jira/Xray project VG
+  - Confluence
+  - Chromium
+  - HTTP client
+training: 60-minute UAT walkthrough 2026-09-21 for regional coordinators

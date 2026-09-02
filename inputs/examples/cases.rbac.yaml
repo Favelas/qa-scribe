@@ -1,0 +1,44 @@
+# VaultGrid RBAC case-pack intake
+# Paste into chat and invoke qa-scribe-cases.
+
+document: cases
+confidential: false
+product_name: VaultGrid
+author_role: Senior QA Analyst
+cycle_id: Cycle 59
+area: RBAC
+id_next: TC-RBAC-001
+environments:
+  class: test_system
+  tenants: [NORTHWIND, GLOBEX]
+  roles: [Admin, Investigator, Reporter, Read-only]
+  build: vaultgrid-2026.59.x
+requirements:
+  - REQ-RBAC-01
+  - REQ-RBAC-02
+  - REQ-RBAC-03
+  - REQ-RBAC-04
+  - REQ-RBAC-05
+  - REQ-RBAC-06
+  - REQ-RBAC-07
+  - REQ-RBAC-08
+  - REQ-API-01
+  - REQ-API-02
+risks:
+  - id: RSK-ISO-01
+    level: Critical
+  - id: RSK-ISO-02
+    level: High
+  - id: RSK-RBAC-01
+    level: High
+  - id: RSK-RBAC-02
+    level: High
+  - id: RSK-API-01
+    level: High
+  - id: RSK-EXP-01
+    level: High
+rbac_matrix_ref: product/rbac-matrix.md
+xray_project_key: VG
+include_permission_bypass: true
+cross_tenant_expected_http: 404
+home_tenant_wrong_role_http: 403
