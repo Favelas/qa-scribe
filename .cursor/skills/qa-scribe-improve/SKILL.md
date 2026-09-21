@@ -26,7 +26,7 @@ Learnings are engineering notes for the skills. They are not signed testware. Go
    - Root cause (skill gap vs user error vs missing intake)
    - Rule to add (one concrete sentence the skill can enforce)
    - Better excerpt (NDA-safe, VaultGrid or fictional)
-4. **PATCH** the relevant skill (`SKILL.md` and/or `reference.md`) with that rule. Bump patch or minor version in the skill header (semver). Start family was **v1.0.0**.
+4. **PATCH** the relevant skill (`SKILL.md` and/or `reference.md`) with that rule. Bump patch or minor version in the skill header (semver). Start family was **v1.0.0**. Patch only the canonical copy under `.claude/skills/<generator>/`. Then run `scripts/sync-skills.sh --apply` to regenerate the matching `.cursor/skills/<generator>/` mirror — never hand-edit `.cursor/skills/` directly; it is generated and any hand edit will be overwritten by the next sync.
 5. Append `learnings/CHANGELOG.md`: skill, semver bump, what, why.
 6. Re-check golden examples so the rewrite did not destroy the standard (see checklist below).
 7. Stamp future outputs with generator name + new skill version.

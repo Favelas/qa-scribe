@@ -1,0 +1,7 @@
+#!/bin/sh
+# Blocks the commit if .cursor/skills/ has drifted from the canonical .claude/skills/.
+#
+# One-time setup after cloning this repo:
+#   git config core.hooksPath .githooks
+repo_root="$(git rev-parse --show-toplevel)"
+exec "$repo_root/scripts/sync-skills.sh" --check

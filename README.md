@@ -44,7 +44,7 @@ Thesis: AI drafts. Named standards shape headings. The tester owns risk and sign
 
 **`docs/`** — product, requirements, roles, risks, strategy, plan, cases, RTM, both reports, two defects, prompt pack.
 
-Ignore until you generate: `.cursor/skills/` (Cursor) / `.claude/skills/` (Claude Code) — same rules, kept in sync — plus `standards/`, `inputs/`, `learnings/`, `out/`, `scripts/`.
+Ignore until you generate: `.claude/skills/` (Claude Code, canonical) / `.cursor/skills/` (Cursor, generated mirror — see `AGENTS.md`) — plus `standards/`, `inputs/`, `learnings/`, `out/`, `scripts/`.
 
 ## How to use immediately
 
@@ -115,12 +115,12 @@ Full file: `inputs/examples/plan.cycle-59.yaml`.
 ```text
 docs/               ← read this (strategy, plan, cases, reports, defects)
 inputs/examples/    YAML to generate more
-.cursor/skills/     Cursor generators (agents)
-.claude/skills/     Claude Code generators (agents) — same rules, ported
+.claude/skills/     Claude Code generators (agents) — canonical, edit here
+.cursor/skills/     Cursor generators (agents) — generated mirror, do not edit
 standards/          Templates and rubrics
 learnings/          Skill changelog
 out/                New drafts (gitignored)
-scripts/            Optional YAML check
+scripts/            sync-skills.sh (mirror check/apply), optional YAML check
 ```
 
 ## NDA and fake-data disclaimer
