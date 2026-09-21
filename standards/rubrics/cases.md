@@ -32,5 +32,7 @@
 | C11 | Technique tags from the allowed set only | Must | |
 | C12 | No invented REQ/RSK; no real hashes or customer data | Must | |
 | C13 | Human sign-off; generator + version | Must | |
+| C14 | Pack-wide technique coverage: at least one happy-path (EP) case, one negative-path (NEG) case, and one boundary/edge (BVA) case — or `Not applicable: <reason>` stated when the feature genuinely has no invalid-input surface | Must | |
+| C15 | Every Critical and High risk from the risk register that is in scope for this pack has at least one case tracing to it (reverse of C04's per-case trace — checks the register is not left with an uncovered Critical/High) | Must | |
 
 Score: Must rows all Yes, or **rewrite**.

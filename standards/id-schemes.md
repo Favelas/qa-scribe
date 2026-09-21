@@ -36,6 +36,7 @@
 | RBAC | Role-based access |
 | ISO | Tenant isolation |
 | INT | Integrity / hashing / custody |
+| VAL | Validation / negative input (required fields, boundaries) |
 | AUD | Audit log |
 | EXP | Export / reports |
 | API | API authorisation (when not covered by RBAC/ISO) |

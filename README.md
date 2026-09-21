@@ -44,7 +44,7 @@ Thesis: AI drafts. Named standards shape headings. The tester owns risk and sign
 
 **`docs/`** — product, requirements, roles, risks, strategy, plan, cases, RTM, both reports, two defects, prompt pack.
 
-Ignore until you generate: `.cursor/skills/`, `standards/`, `inputs/`, `learnings/`, `out/`, `scripts/`.
+Ignore until you generate: `.cursor/skills/` (Cursor) / `.claude/skills/` (Claude Code) — same rules, kept in sync — plus `standards/`, `inputs/`, `learnings/`, `out/`, `scripts/`.
 
 ## How to use immediately
 
@@ -116,6 +116,7 @@ Full file: `inputs/examples/plan.cycle-59.yaml`.
 docs/               ← read this (strategy, plan, cases, reports, defects)
 inputs/examples/    YAML to generate more
 .cursor/skills/     Cursor generators (agents)
+.claude/skills/     Claude Code generators (agents) — same rules, ported
 standards/          Templates and rubrics
 learnings/          Skill changelog
 out/                New drafts (gitignored)

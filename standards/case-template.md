@@ -29,7 +29,7 @@
 | Author role | Senior QA Analyst |
 | Status | Draft — human sign-off required |
 | Generator | qa-scribe-cases |
-| Skill version | 1.0.0 |
+| Skill version | 1.1.0 |
 
 Xray is a **tool schema**, not a standard. Columns exist so the pack is paste-ready.
 
@@ -54,6 +54,8 @@ Xray is a **tool schema**, not a standard. Columns exist so the pack is paste-re
 
 - Risk-first: Critical/High risks before Low happy paths in the pack order.
 - Happy, negative, boundary, permission-bypass, and data-integrity paths when the feature can fail that way.
+- Pack-wide minimum: at least one happy (EP), one negative (NEG), and one boundary (BVA) case, or `Not applicable: <reason>` — do not rely only on isolation/RBAC scenarios to satisfy this.
+- Every Critical/High risk from the register in scope has at least one case tracing to it — no uncovered Critical/High.
 - No “verify the page looks good”.
 - Priority maps: Critical risk → Priority 1; High → 2; Medium → 3; Low → 4 (state the mapping in the pack).
 

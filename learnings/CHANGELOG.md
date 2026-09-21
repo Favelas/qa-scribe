@@ -12,3 +12,5 @@ Skill family starts at **v1.0.0**. Append only. No employer/client data.
 | 2026-09-02 | qa-scribe-report | 1.0.0 | Initial skill: status vs completion; risk slice; no fake all-green | Bootstrap — residual High must remain visible |
 | 2026-09-02 | qa-scribe-improve | 1.0.0 | Initial learning loop: score, dated note, patch, changelog, golden re-check | Bootstrap — skills improve without lowering the bar |
 | 2026-09-02 | all generators | 1.0.0 | Goldens moved to `docs/`; UI isolation and role buttons; stopper vs not-a-stopper defects | Same standards, smaller human-facing set |
+| 2026-09-17 | qa-scribe-risks | 1.0.0 | Initial skill: draft product risk register from requirements/user stories, Basis column, Draft-until-signed | Fills gap — no skill previously generated a risk register |
+| 2026-09-21 | qa-scribe-cases | 1.1.0 | Added C14 (pack-wide EP+NEG+BVA coverage, not just conditional on isolation/RBAC) and C15 (every Critical/High risk in scope traces to a case) as Must rubric rows | Audit found a pack could pass every Must row with only happy-path cases and an uncovered Critical risk — see `learnings/2026-09-21-cases-risk-and-technique-coverage.md` |

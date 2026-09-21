@@ -21,6 +21,7 @@ QA Scribe binds each generator to named standards so headings and fields are not
 
 | Document | QA Scribe skill | Standard(s) cited (mandatory) | Optional overlay | Forbidden in that document |
 | --- | --- | --- | --- | --- |
+| Product risk register | `qa-scribe-risks` | ISTQB risk-based testing (no ISO/IEC/IEEE document number exists for this artefact) | — | Risks with no Basis; invented probability/impact numbers; register presented as confirmed fact instead of draft pending sign-off |
 | Test strategy | `qa-scribe-strategy` | ISO/IEC/IEEE 29119-3 Test Strategy; ISTQB (test strategy vs test plan; risk-based testing) | ISO/IEC 25010 characteristics as an evaluation checklist only | Cycle deadline, named hour allocations, “Cycle 59”, sprint calendar, named testers’ hours |
 | Test plan | `qa-scribe-plan` | IEEE 829-2008 Test Plan (15 sections in order); ISO/IEC/IEEE 29119-3 Test Plan; ISTQB test plan / entry-exit / staffing | — | Strategy-only prose with no dates, no named allocation, no RTM |
 | Test cases | `qa-scribe-cases` | IEEE 829 Test Case Specification; ISO/IEC/IEEE 29119-3 Test Case Specification; techniques from ISO/IEC/IEEE 29119-4 and ISTQB | Xray field names (tool schema, not a standard) | Vague UI “looks good” cases; mixed features in one case; missing REQ/RSK trace |
