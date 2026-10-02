@@ -17,10 +17,14 @@
 
 ---
 
-## 1. Five generators, five jobs
+## 1. Document jobs (do not mix)
 
-| Generator | Job | Not its job |
+Catalog of what to create: `standards/README.md`.
+
+| Document | Job | Not its job |
 | --- | --- | --- |
+| Product risk register | What could go wrong; level; stopper | Allocating tests (that is the matrix) |
+| Risk-based test matrix | Allocate each `RSK-` to depth / type / level | Identifying new risks; cycle RTM; role × screen |
 | Test strategy | How we test **this product** over months | Cycle dates, named hours, “Cycle 59” |
 | Test plan | How we get **this cycle** out the door | Replacing the strategy; inventing a new test approach from scratch |
 | Test cases | What we will execute | Strategy narrative; resource calendar |
@@ -39,12 +43,14 @@ Mixing strategy and plan is a **fail**. If the user asks for “a test plan with
 
 - Product risk (Critical, High, Medium, Low) drives case order, case priority, and report slicing.
 - Permission-bypass, isolation, integrity, and audit paths are designed before cosmetic happy paths.
+- The **risk-based test matrix** (`MTX-…`) allocates each register risk to test levels, types, techniques, and coverage depth. It is not the risk register, not the cycle RTM, and not the role × screen matrix.
 - Reports slice by risk, not by “N cases passed”.
 
 ## 4. Traceability
 
 - Cases trace to `REQ-` and `RSK-` IDs from intake (VaultGrid: `docs/requirements.md`, `docs/risks.md`).
-- Plans include a requirements traceability matrix (RTM).
+- Plans include a requirements traceability matrix (RTM) (`REQ-` → `TC-` for **this cycle**).
+- The product-level risk-based test matrix maps `RSK-` → depth / type / level → `TC-` or Planned.
 - Do not invent requirement IDs, dates, or people’s names. Collect them with `qa-scribe-intake`.
 
 ## 5. Immediate usability

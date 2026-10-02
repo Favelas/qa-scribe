@@ -1,6 +1,6 @@
 ---
 name: qa-scribe-all
-description: Takes pasted requirements or user stories and drives the full QA Scribe set in one pass — risk register, strategy, and test cases automatically, plan and report when the extra facts exist. Use when the user pastes user stories/requirements and wants QA documentation generated, asks to "generate everything", "create all the docs", "run qa scribe on this", or wants a plan/test-case/risk/strategy bundle from one input instead of running each generator by hand.
+description: Takes pasted requirements or user stories and drives the full QA Scribe set in one pass — risk register, risk-based test matrix, strategy, and test cases automatically, plan and report when the extra facts exist. Use when the user pastes user stories/requirements and wants QA documentation generated, asks to "generate everything", "create all the docs", "run qa scribe on this", or wants a plan/test-case/risk/strategy bundle from one input instead of running each generator by hand.
 ---
 
 # QA Scribe — generate everything
@@ -11,7 +11,7 @@ Single entry point: paste requirements/user stories once, get as much of the QA 
 
 ## When this skill applies
 
-Trigger terms: generate everything, create all the docs, run qa scribe on this, give me strategy/plan/cases/risks from these stories, full QA Scribe bundle.
+Trigger terms: generate everything, create all the docs, run qa scribe on this, give me strategy/plan/cases/risks/matrix from these stories, full QA Scribe bundle.
 
 ## Human still signs
 
@@ -34,8 +34,8 @@ This list becomes the shared intake (`requirements_ref` / `risk_register_ref` eq
 
 Ask once, via AskUserQuestion (or equivalent), before generating anything:
 
-- **All applicable now (recommended)** — Risk Register + Strategy + Test Cases generate immediately from the confirmed IDs; Plan and Report are attempted too but will report as pending if their required facts (below) aren't supplied.
-- **Let me pick specific ones** — offer Risk Register / Strategy / Test Cases / Plan / Report / Prompts as a multi-select.
+- **All applicable now (recommended)** — Risk Register + Risk-based test matrix + Strategy + Test Cases generate immediately from the confirmed IDs; Plan and Report are attempted too but will report as pending if their required facts (below) aren't supplied.
+- **Let me pick specific ones** — offer Risk Register / Risk-based test matrix / Strategy / Test Cases / Plan / Report / Prompts as a multi-select.
 
 Do not ask this question more than once per run. If the user's original message already said which ones they want (or said "just cases" etc.), skip the question and honor that.
 
@@ -44,6 +44,7 @@ Do not ask this question more than once per run. If the user's original message 
 | Doc | Needs beyond the confirmed REQ/RSK list | Runs in "all" without extra asking? |
 | --- | --- | --- |
 | Risk register | Nothing else | Yes |
+| Risk-based test matrix | Confirmed RSK list with Level, Stopper?, Test depth, plus REQ IDs — produced by the register step in this run | Yes, after the risk register |
 | Strategy | Scope/objectives (in/out of scope) — ask one follow-up if not inferable from the input | Yes |
 | Test cases | `area`, next TC id (default `001` if this is a fresh area), environment/precondition facts — ask one follow-up if missing | Yes |
 | Plan | Named people + hours, a real schedule/deadline | Only if the user supplies these when asked; otherwise reported as pending, never fabricated |
@@ -54,11 +55,11 @@ When Plan or Report is in scope but its extra facts are missing, ask for them on
 
 ## Step 5 — Generate, one generator at a time, by reading its own rules
 
-For each doc type in scope, in this order — Risk register → Strategy → Test cases → Plan → Report → Prompts (skip any not in scope or missing required facts):
+For each doc type in scope, in this order — Risk register → Risk-based test matrix → Strategy → Test cases → Plan → Report → Prompts (skip any not in scope or missing required facts):
 
 1. Read `.claude/skills/qa-scribe-<type>/SKILL.md`, its `reference.md`, and its `rubric.md`.
 2. Follow those files' required headings, fail-if-missing conditions, and output path exactly, using the confirmed IDs from Step 2 and any facts gathered in Step 4.
-3. Write the result to the exact `out/` path that skill's own SKILL.md specifies (e.g. `out/RSK-<PRODUCT>-register.md`, `out/STR-<PRODUCT>-001.md`, `out/TC-<AREA>-pack.md` + `.csv`, `out/PLN-<PRODUCT>-<cycle>-001.md` + `out/<cycle>-rtm.csv`, `out/RPT-STS-...md` or `out/RPT-SUM-...md`).
+3. Write the result to the exact `out/` path that skill's own SKILL.md specifies (e.g. `out/RSK-<PRODUCT>-register.md`, `out/MTX-<PRODUCT>-001.md`, `out/STR-<PRODUCT>-001.md`, `out/TC-<AREA>-pack.md` + `.csv`, `out/PLN-<PRODUCT>-<cycle>-001.md` + `out/<cycle>-rtm.csv`, `out/RPT-STS-...md` or `out/RPT-SUM-...md`).
 4. Self-check against that generator's own `rubric.md` before moving to the next doc; fix Must-fails before writing the file, don't hand the user a known-failing draft.
 
 ## Step 6 — Status summary

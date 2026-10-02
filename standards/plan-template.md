@@ -67,7 +67,7 @@ What stops the cycle (environment down, Crit blocker, data integrity incident in
 
 ## 9. Test deliverables
 
-Plan, cases, RTM, logs, status reports, completion report, defect list.
+Plan, cases, RTM, risk-based test matrix (if already written), logs, status reports, completion report, defect list.
 
 ## 10. Remaining test tasks
 

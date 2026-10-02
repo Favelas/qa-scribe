@@ -7,7 +7,7 @@ description: Drafts a candidate product risk register (ID, plain-English risk, l
 
 Version: **1.0.0**
 
-Turn stated features into a ranked list of **what could go wrong**. Every downstream generator (`qa-scribe-strategy`, `qa-scribe-plan`, `qa-scribe-cases`) treats this file's output as the `risk_register_ref` input — so it must be honest about being a draft, not settled fact.
+Turn stated features into a ranked list of **what could go wrong**. Every downstream generator (`qa-scribe-matrix`, `qa-scribe-strategy`, `qa-scribe-plan`, `qa-scribe-cases`) treats this file's output as the `risk_register_ref` input — so it must be honest about being a draft, not settled fact.
 
 ## When this skill applies
 

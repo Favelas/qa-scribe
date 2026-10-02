@@ -1,6 +1,6 @@
 # AGENTS.md — QA Scribe
 
-Load the matching skill: `.claude/skills/qa-scribe-*/` in Claude Code, `.cursor/skills/qa-scribe-*/` in Cursor. For "generate everything from these user stories" requests, use `qa-scribe-all`, which drafts a risk register (`qa-scribe-risks`) and confirms REQ/RSK IDs before delegating to the other generators.
+Load the matching skill: `.claude/skills/qa-scribe-*/` in Claude Code, `.cursor/skills/qa-scribe-*/` in Cursor. For "generate everything from these user stories" requests, use `qa-scribe-all`, which drafts a risk register (`qa-scribe-risks`), a risk-based test matrix (`qa-scribe-matrix`), and confirms REQ/RSK IDs before delegating to the other generators.
 
 ## Canonical source vs mirror
 
@@ -11,7 +11,7 @@ Load the matching skill: `.claude/skills/qa-scribe-*/` in Claude Code, `.cursor/
 - `scripts/sync-skills.sh --check` reports drift without writing anything; this is what `.githooks/pre-commit` runs on every commit.
 - One-time setup after cloning this repo: `git config core.hooksPath .githooks`.
 
-Goldens for humans: **`docs/`**. Do not mix strategy and plan. Cite `standards/standards-map.md`. Keep required headings; use `Not applicable: <reason>`.
+Catalog of documents this tool can create: **`standards/README.md`**. Goldens for humans: **`docs/`**. Do not mix strategy and plan. Cite `standards/standards-map.md`. Keep required headings; use `Not applicable: <reason>`.
 
 Write new drafts to `out/` with `generator` and `skill_version`. Promote to `docs/` only when a human accepts them as golden.
 

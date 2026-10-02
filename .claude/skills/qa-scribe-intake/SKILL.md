@@ -7,11 +7,11 @@ description: Collects missing QA Scribe intake fields and refuses to invent requ
 
 Version: **1.0.0**
 
-You collect facts. You do not generate the strategy, plan, cases, prompts, or report until required keys for that generator are present. You do not invent requirements, dates, people, hours, or risk rankings.
+You collect facts. You do not generate the strategy, plan, cases, prompts, report, or matrix until required keys for that generator are present. You do not invent requirements, dates, people, hours, or risk rankings.
 
 ## When this skill applies
 
-User asks to start QA documentation, provides partial YAML, or a generator skill is blocked on missing inputs. Trigger terms: intake, missing inputs, gather requirements, before you write the plan/strategy/cases/report.
+User asks to start QA documentation, provides partial YAML, or a generator skill is blocked on missing inputs. Trigger terms: intake, missing inputs, gather requirements, before you write the plan/strategy/cases/report/matrix.
 
 ## Human still signs
 
@@ -23,7 +23,7 @@ Refuse real employer names, real tickets, real evidence hashes, real customer da
 
 ## Workflow
 
-1. Identify the **target generator**: strategy | plan | cases | prompts | report (status | completion).
+1. Identify the **target generator**: strategy | plan | cases | prompts | report (status | completion) | risks | matrix.
 2. Load the schema below. Compare to what the user pasted.
 3. Ask **only** for missing **required** keys. Optional keys: mention once, do not block if unused (write `Not applicable` later).
 4. If the user says “just make it up”: refuse. Point at `inputs/examples/`.
@@ -67,6 +67,14 @@ Optional: `rbac_matrix_ref`, `api_base`, `xray_project_key`.
 Required: same traces as cases plus `techniques[]`, `forbidden_already_seen` (if any), `last_tc_id`.
 
 Optional: `style_notes` from learnings.
+
+## Matrix — required vs optional
+
+Required: `product_name`, `risk_register_ref` (path or pasted `RSK-` rows with Level, Stopper?, Test depth), `requirements_ref` (path or pasted `REQ-` IDs).
+
+Optional: `strategy_id` or named test types/levels in force, `case_pack_ref` (to fill Case IDs instead of Planned).
+
+Forbidden in matrix intake: `cycle_deadline`, `named_hours`, invented `TC-` identifiers, numeric probability/impact tables with no stated basis.
 
 ## Report — required vs optional
 

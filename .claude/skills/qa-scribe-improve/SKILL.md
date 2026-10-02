@@ -1,6 +1,6 @@
 ---
 name: qa-scribe-improve
-description: Scores generated QA Scribe output against the matching rubric, writes a dated learning note, patches the generator skill with a concrete rule, and re-checks golden examples. Use when the user critiques a strategy, plan, cases, prompts, or report, fills a rubric, provides a corrected document, or asks to improve, learn, or rewrite the skill.
+description: Scores generated QA Scribe output against the matching rubric, writes a dated learning note, patches the generator skill with a concrete rule, and re-checks golden examples. Use when the user critiques a strategy, plan, cases, prompts, report, or risk-based test matrix, fills a rubric, provides a corrected document, or asks to improve, learn, or rewrite the skill.
 ---
 
 # QA Scribe — learning loop
@@ -11,7 +11,7 @@ Take generated output + human critique and/or filled rubric + optional corrected
 
 ## When this skill applies
 
-Trigger terms: improve the skill, learning loop, rubric score, rewrite the generator, we rejected this plan/strategy/cases/report, add a rule.
+Trigger terms: improve the skill, learning loop, rubric score, rewrite the generator, we rejected this plan/strategy/cases/report/matrix, add a rule.
 
 ## Human still signs
 
@@ -19,7 +19,7 @@ Learnings are engineering notes for the skills. They are not signed testware. Go
 
 ## Workflow
 
-1. Identify the **target generator** (strategy | plan | cases | prompts | report). Load that skill’s `rubric.md` and `standards/rubrics/<generator>.md`.
+1. Identify the **target generator** (strategy | plan | cases | prompts | report | risks | matrix). Load that skill’s `rubric.md` and `standards/rubrics/<generator>.md`.
 2. Score the artefact. Record Must fails.
 3. Write dated learning: `learnings/YYYY-MM-DD-<topic>.md` with:
    - Failure (what the human saw)
@@ -40,6 +40,8 @@ Learnings are engineering notes for the skills. They are not signed testware. Go
 | cases | Isolation search (A must not see B) and role-button cases still present with REQ + RSK + technique |
 | prompts | Field layout still forced |
 | report | Status ≠ completion; completion is go-with-risks or no-go with leftover High |
+| risks | `docs/risks.md` — Stopper?, Critical/High first; still Draft until sign-off |
+| matrix | `standards/risk-based-test-matrix-template.md` — required headings still present; no invented TC IDs; Critical cannot be None |
 
 ## Rules that never change
 

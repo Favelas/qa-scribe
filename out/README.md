@@ -9,7 +9,7 @@
 
 ## How to use this file
 
-1. Point generators at this folder: `out/STR-…`, `out/PLN-…`, `out/TC-…`, `out/RPT-…`.
+1. Pick the document in [`standards/README.md`](../standards/README.md), then point the matching generator at this folder: `out/RSK-…`, `out/MTX-…`, `out/STR-…`, `out/PLN-…`, `out/TC-…`, `out/RPT-…`.
 2. Stamp YAML or a control table with `generator` and `skill_version`.
 3. Do not promote to `docs/` until a human accepts the artefact as golden.
 4. Delete drafts you do not need; keep this README and `.gitkeep`.

@@ -27,6 +27,7 @@
 | Completion / summary report | `RPT-SUM-<PRODUCT>-<cycle>-<nnn>` | `RPT-SUM-VAULTGRID-C59-001` | End of cycle |
 | Requirement | `REQ-<AREA>-<nnn>` | `REQ-ISO-01` | From intake / `docs/requirements.md` |
 | Product risk | `RSK-<AREA>-<nnn>` | `RSK-ISO-01` | From intake / `docs/risks.md` |
+| Risk-based test matrix | `MTX-<PRODUCT>-<nnn>` | `MTX-VAULTGRID-001` | Product-level allocation of register risks to levels/types/depth; not a cycle RTM |
 | Defect (examples) | `DEF-<cycle>-<nnn>` | `DEF-C59-012` | Fictional; IEEE 1044 category + severity when listed |
 
 ## Area codes

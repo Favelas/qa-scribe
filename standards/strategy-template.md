@@ -68,7 +68,7 @@ Point to ISO/IEC/IEEE 29119-4 / ISTQB: EP, BVA, DT, ST, NEG, ROLE-MATRIX, INTEGR
 
 ## 8. Risk-based approach
 
-How product risk (see risk register) maps to coverage depth and case priority. Critical/High before Low happy paths.
+How product risk (see risk register) maps to coverage depth and case priority. Put the working table in the risk-based test matrix (`MTX-…` / `standards/risk-based-test-matrix-template.md`). Critical/High before Low happy paths.
 
 ## 9. Environments, test data strategy, tools
 
@@ -88,7 +88,7 @@ Severity vs priority. IEEE 1044 category overlay is allowed when classifying. Es
 
 ## 13. Communication and catalogue of deliverables
 
-Strategy, plan (per cycle), cases, RTM, status reports, completion reports, prompt packs.
+Strategy, risk-based test matrix, plan (per cycle), cases, RTM, status reports, completion reports, prompt packs.
 
 ## 14. Manual vs automated vs out of scope
 
