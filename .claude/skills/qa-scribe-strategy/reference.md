@@ -1,6 +1,6 @@
 # Strategy skill — reference (29119-3 / ISTQB)
 
-Use with `.cursor/skills/qa-scribe-strategy/SKILL.md`. Skill version 1.0.0.
+Use with `.claude/skills/qa-scribe-strategy/SKILL.md`. Skill version 1.1.0.
 
 ## Strategy vs plan (do not mix)
 
@@ -48,3 +48,15 @@ Jira/Xray for case repository, Confluence for signed docs, optional Postman/Play
 ## Golden regression
 
 After any skill patch, confirm `docs/strategy.md` still has **zero** named hours and **zero** cycle deadline (rubric S17).
+
+## Cloud migration / 100% parity
+
+When the user asks how to test a **legacy → cloud** move or **100% parity**:
+
+1. Read `standards/cloud-migration-approach-template.md` with the Read tool and copy **its** headings (not the generic strategy list).
+2. Legacy is the oracle. Named **delta list** for anything that must differ. Split parity set vs cleanse set if both were requested.
+3. Sequence: baseline → compare contract → dual-run → data then API then UI → rollback after writes → no-go on open Crit parity.
+4. 100% data parity ⇒ full reconciliation, not a sample. Do not lead with exploratory UI.
+5. Hours, wave dates, cutover clock time → refuse here; that is `qa-scribe-plan`.
+6. Risks: tell the user to run `qa-scribe-risks` (or generate it in the same session) using overlay §12 as a lens, not as a pasted unsigned dump inside the strategy.
+7. Keep **For the Software Testing Engineer (plain)**. Do not call that reader a tester.

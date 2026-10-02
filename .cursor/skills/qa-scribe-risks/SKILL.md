@@ -1,17 +1,17 @@
 ---
 name: qa-scribe-risks
-description: Drafts a candidate product risk register (ID, plain-English risk, level, stopper?, test depth) from requirements or plain user stories, bound to ISTQB risk-based testing. Use when the user asks for a risk register, product risks, what could go wrong, risk-based test depth, or wants risks derived from user stories before running strategy, plan, or cases.
+description: Drafts a candidate product risk register (ID, plain-English risk, level, stopper?, test depth) from requirements or plain user stories, bound to ISTQB risk-based testing. Use when the user asks for a risk register, product risks, what could go wrong, risk-based test depth, cloud migration risks, 100% parity risks, or wants risks derived from user stories before running strategy, plan, or cases.
 ---
 
 # QA Scribe — risk register
 
-Version: **1.0.0**
+Version: **1.1.0**
 
 Turn stated features into a ranked list of **what could go wrong**. Every downstream generator (`qa-scribe-matrix`, `qa-scribe-strategy`, `qa-scribe-plan`, `qa-scribe-cases`) treats this file's output as the `risk_register_ref` input — so it must be honest about being a draft, not settled fact.
 
 ## When this skill applies
 
-Trigger terms: risk register, product risks, what could go wrong, risk-based testing, stopper risks, risk levels, before we write the strategy/plan/cases.
+Trigger terms: risk register, product risks, what could go wrong, risk-based testing, stopper risks, risk levels, before we write the strategy/plan/cases, cloud migration risks, 100% parity, dual-run, reconciliation.
 
 ## Human still signs
 
@@ -25,7 +25,9 @@ ISTQB risk-based testing (product risk identification, likelihood × impact, ris
 
 Required: `product_name`, and **either** existing `REQ-<AREA>-nn` requirement IDs **or** plain-English requirements/user stories to analyze.
 
-Optional: known constraints that widen the risk lens — multi-tenant?, RBAC/permission tiers?, handles files/uploads?, audit/compliance needs?, integrations/APIs?, regions/UAT?
+Optional: known constraints that widen the risk lens — multi-tenant?, RBAC/permission tiers?, handles files/uploads?, audit/compliance needs?, integrations/APIs?, regions/UAT?, **cloud migration / 100% parity with legacy?**
+
+If the input is a **legacy → cloud** move or claims **100% parity**: read `standards/cloud-migration-approach-template.md` §12 and `.claude/skills/qa-scribe-risks/reference.md` (Cloud migration / 100% parity). Infer only lenses the input supports. Full-row reconciliation (not sample) when 100% data parity is claimed. If they also asked to cleanse/fix data, add an explicit delta/parity-split risk rather than mixing the two.
 
 Inference is allowed (e.g. "search across tenants" → tenant-isolation risk). Invention is not: do not assign a probability/impact number, name a specific data type, or claim a compliance obligation that nothing in the input implies. If the input is too thin to support even inference, say so and ask one clarifying question rather than filling the table with generic filler risks.
 
@@ -38,7 +40,7 @@ Inference is allowed (e.g. "search across tenants" → tenant-isolation risk). I
 - Author role: Senior QA Analyst (AI-drafted, pending sign-off)
 - Status: **Draft — human sign-off required before strategy/plan/cases treat this as fact**
 
-Stamp: `generator: qa-scribe-risks`, `skill_version: 1.0.0`.
+Stamp: `generator: qa-scribe-risks`, `skill_version: 1.1.0`.
 
 ## Required fields on EVERY risk
 
@@ -54,7 +56,7 @@ Stamp: `generator: qa-scribe-risks`, `skill_version: 1.0.0`.
 ## Risk design rules
 
 - Rank Critical/High before Medium/Low — same convention as every other QA Scribe pack.
-- Use a category lens only where the input actually supports it: tenant isolation, RBAC/permission leakage, data integrity (upload/hash/custody), negative/validation (empty/boundary input), audit/traceability, export/availability, regional/UAT acceptance. Skip categories the input gives no basis for — do not pad the table to look thorough.
+- Use a category lens only where the input actually supports it: tenant isolation, RBAC/permission leakage, data integrity (upload/hash/custody), negative/validation (empty/boundary input), audit/traceability, export/availability, regional/UAT acceptance, **and — if the input is a migration/parity program —** reconciliation, field mutation, rollback, split-brain/DNS, batch/scheduler, config/flags (overlay §12). Skip categories the input gives no basis for — do not pad the table to look thorough.
 - Every risk traces to a REQ ID or a quoted/paraphrased fragment of the input in the Basis column. No orphan risks.
 - If the same failure mode could be split into a Critical version (data crosses a real boundary) and a lesser version (button visible but action blocked), write both — that distinction is what makes "go-with-risks" vs "no-go" decisions later actually mean something.
 

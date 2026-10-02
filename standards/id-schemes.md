@@ -42,3 +42,10 @@
 | EXP | Export / reports |
 | API | API authorisation (when not covered by RBAC/ISO) |
 | UAT | Acceptance in a region |
+| MIG | Cloud / platform migration (program-level; not a new document type) |
+| REC | Data reconciliation / parity counts after a move |
+| NET | Network, DNS, TTL, allowlists, split-brain |
+| BAT | Batch / scheduler / job timezone |
+| RBL | Rollback / failback |
+| CUT | Cutover / dual-write window |
+| CFG | Config, secrets, feature flags (never paste real secrets) |

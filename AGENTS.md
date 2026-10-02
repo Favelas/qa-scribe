@@ -11,7 +11,7 @@ Load the matching skill: `.claude/skills/qa-scribe-*/` in Claude Code, `.cursor/
 - `scripts/sync-skills.sh --check` reports drift without writing anything; this is what `.githooks/pre-commit` runs on every commit.
 - One-time setup after cloning this repo: `git config core.hooksPath .githooks`.
 
-Catalog of documents this tool can create: **`standards/README.md`**. Goldens for humans: **`docs/`**. Do not mix strategy and plan. Cite `standards/standards-map.md`. Keep required headings; use `Not applicable: <reason>`.
+Catalog of documents this tool can create: **`standards/README.md`**. Cloud migration / 100% parity with legacy: overlay `standards/cloud-migration-approach-template.md` (strategy, not a plan). Goldens for humans: **`docs/`**. Do not mix strategy and plan. Cite `standards/standards-map.md`. Keep required headings; use `Not applicable: <reason>`.
 
 Write new drafts to `out/` with `generator` and `skill_version`. Promote to `docs/` only when a human accepts them as golden.
 

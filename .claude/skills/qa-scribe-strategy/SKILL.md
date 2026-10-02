@@ -1,17 +1,29 @@
 ---
 name: qa-scribe-strategy
-description: Writes a product-level test strategy bound to ISO/IEC/IEEE 29119-3 and ISTQB (strategy vs plan, risk-based testing). Use when the user asks for a test strategy, QA approach, how we test this product, or long-term test design — not a cycle plan with dates and hours.
+description: Writes a product-level test strategy bound to ISO/IEC/IEEE 29119-3 and ISTQB (strategy vs plan, risk-based testing). Use when the user asks for a test strategy, QA approach, how we test this product, long-term test design, cloud migration approach, 100% parity with legacy, or dual-run/shadow testing — not a cycle plan with dates and hours.
 ---
 
 # QA Scribe — test strategy
 
-Version: **1.0.0**
+Version: **1.1.0**
 
 Produce a **test strategy**: how we test this product over months. Stable approach. Not this cycle’s calendar.
 
 ## When this skill applies
 
-Trigger terms: test strategy, QA strategy, test approach, risk-based testing approach, 29119-3 strategy. If the user wants dates, named hours, or “Cycle 59”, **switch to `qa-scribe-plan`** (after intake). Do not mix.
+Trigger terms: test strategy, QA strategy, test approach, risk-based testing approach, 29119-3 strategy, cloud migration approach/high-level (no dates), 100% parity, legacy vs cloud, dual-run, shadow testing, reconciliation. If the user wants dates, named hours, or “Cycle 59”, **switch to `qa-scribe-plan`** (after intake). Do not mix.
+
+If the user wants a **cloud migration** high-level approach, “how would you test a migration”, or **100% parity** with a legacy system: copy headings from `standards/cloud-migration-approach-template.md` (read that file with the Read tool first). That file is a strategy overlay (`STR-…`), **not** a cycle plan.
+
+Rules for that overlay:
+
+- Legacy is the **oracle** unless intake named another. “Fix on the way” must be a **named delta list**, not silent.
+- If intake says 100% **and** cleanse/fix data, split **parity set** vs **cleanse set** in §3; do not pretend both are 100% parity.
+- How we test: baseline → freeze compare contract → dual-run/shadow → data diffs before API before UI → rollback rehearsal (after target writes) → cutover no-go on open Crit parity.
+- Do not invent a cloud vendor, RTO/RPO, wave calendar, stores, or interfaces. Empty rows stay `Unknown` or `Not applicable: <reason>`.
+- Do not start the strategy with exploratory UI on the new URL. Do not accept sampled-row reconciliation as 100% data parity.
+- Candidate risks belong in `qa-scribe-risks` using §12 of the overlay as a **lens**, not pasted as a fake signed register inside the strategy.
+- Always keep the heading **For the Software Testing Engineer (plain)** at the top of the generated overlay (after document control). Do not call that reader a “tester”. House role in the control block stays Senior QA Analyst unless intake named another title.
 
 ## Human still signs
 
@@ -47,12 +59,14 @@ YAML stamp:
 
 ```yaml
 generator: qa-scribe-strategy
-skill_version: 1.0.0
+skill_version: 1.1.0
 ```
 
 ## Required heading list (keep order)
 
-Copy from `standards/strategy-template.md`:
+Copy from `standards/strategy-template.md`.
+
+If the user asked for a **cloud migration** high-level approach, 100% parity, or dual-run (no dates): copy from `standards/cloud-migration-approach-template.md` instead (all of its numbered headings, including Parity contract, How we test, and Candidate risk lenses). Same fail-if-missing on hours/dates; extra fail: invented vendor, RTO/RPO, wave calendar, sampled-row “100%” data claim, or exploratory-UI-first sequence.
 
 1. Context / item under test
 2. Test objectives
@@ -75,7 +89,7 @@ If a section has no data: keep the heading; write `Not applicable: <reason>`.
 
 ## Fail-if-missing
 
-Use `standards/rubrics/strategy.md` and sibling `rubric.md`. Immediate fail: any named hours or cycle deadline; missing test levels; cases written in full in the strategy; no risk → depth rule.
+Use `standards/rubrics/strategy.md` and sibling `rubric.md`. Immediate fail: any named hours or cycle deadline; missing test levels; cases written in full in the strategy; no risk → depth rule. For the migration overlay: immediate fail if a 100% parity claim has no §3 contract, or if Crit data reconciliation is described as a sample.
 
 ## Output path
 

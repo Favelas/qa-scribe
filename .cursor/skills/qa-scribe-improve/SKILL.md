@@ -42,6 +42,7 @@ Learnings are engineering notes for the skills. They are not signed testware. Go
 | report | Status ≠ completion; completion is go-with-risks or no-go with leftover High |
 | risks | `docs/risks.md` — Stopper?, Critical/High first; still Draft until sign-off |
 | matrix | `standards/risk-based-test-matrix-template.md` — required headings still present; no invented TC IDs; Critical cannot be None |
+| strategy (migration overlay) | `standards/cloud-migration-approach-template.md` — parity contract, dual-run, candidate lenses still present; still not a plan |
 
 ## Rules that never change
 

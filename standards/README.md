@@ -29,6 +29,16 @@ Suggested order for a new product: 1 → 2 → 3 → 4, then 6 when you have peo
 
 Do not mix strategy and plan. Do not use the risk-based test matrix as a substitute for the risk register, the cycle RTM, or the role × screen table.
 
+## Overlays (not a ninth generator)
+
+Use these **in addition to** documents 1–8 when the program is a special shape. They do **not** replace the risk register, the **risk-based test matrix**, cases, or a later cycle plan. They are still `STR-…` (approach), never `PLN-…`. No filled golden until a human asks for one.
+
+A cloud migration still needs: register (`RSK-…`) → **matrix (`MTX-…`)** → this overlay as the strategy body → cases.
+
+| Overlay | What it is | Duplicate this template | Say this in Cursor |
+| --- | --- | --- | --- |
+| Cloud migration test approach | High-level what to consider when moving workloads to a cloud, including **100% parity** with legacy (oracle, dual-run, full reconciliation, candidate risk lenses). Phases are **classes**, not dates. **Addition** to register + matrix + cases — not a replacement. | [cloud-migration-approach-template.md](cloud-migration-approach-template.md) | `qa-scribe-strategy` (overlay) **and** `qa-scribe-risks` **and** `qa-scribe-matrix`. Do **not** ask for a test plan unless you have people, hours, and a deadline. |
+
 ## Helpers (not documents)
 
 | Skill | When to use |

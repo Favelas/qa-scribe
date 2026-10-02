@@ -40,7 +40,8 @@ Scribe drafts IEEE/ISO/ISTQB-shaped QA paperwork from **your** facts. It does no
 | New product, you have user stories, you want the pack | *Use `qa-scribe-all`.* Confirm the REQ/RSK list it proposes. It writes register + matrix + strategy + cases to `out/`. Plan/report wait until you have people, hours, a deadline, or execution counts. |
 | You only need **this cycle’s plan** | Bring product, cycle name, `STR-…` if you have it, named people × hours, deadline, in/out features, `RSK-` list. *Use `qa-scribe-plan`.* Draft: `out/PLN-…` + RTM CSV. Without named people, hours, and a deadline it will refuse — that would be a strategy, not a plan. |
 | Isolation / RBAC / “who sees which button” | Need `REQ-` + `RSK-` + roles. *Use `qa-scribe-cases`.* Paste Markdown to Confluence; import CSV to Xray. |
-| “How we test this product” with **no** sprint dates | *Use `qa-scribe-strategy`.* If you also give dates and hours, that is a **plan**, not a strategy. |
+| You need to allocate each `RSK-` to level, type, technique, coverage depth | *Use `qa-scribe-matrix`.* Needs the risk register. Draft: `out/MTX-…`. This is **not** the cycle RTM and **not** replaced by a cloud overlay. |
+| Cloud migration / 100% parity with legacy (no dates) | *Use `qa-scribe-strategy`* with the overlay in [`standards/cloud-migration-approach-template.md`](standards/cloud-migration-approach-template.md), **and** still generate register + **matrix**. Do not skip `qa-scribe-matrix`. |
 | Mid-cycle “are we on track?” | Real pass/fail/blocked counts by risk. *Use `qa-scribe-report` (status).* |
 | End of cycle go / go-with-risks / no-go | Same counts plus leftover Crit/High. *Use `qa-scribe-report` (completion).* You (or QA Manager / PO) choose the recommendation — the agent does not. |
 | You have stories but not hours or a deadline yet | Do **not** start with a plan. Register → matrix → strategy → cases first. |
@@ -54,13 +55,13 @@ Scribe drafts IEEE/ISO/ISTQB-shaped QA paperwork from **your** facts. It does no
 ### Not this
 
 - Not real customers or real evidence — **all sample data is fake**
-- Not an autonomous tester, not TestRail/Xray as a product, not a hosted SaaS
+- Not an autonomous stand-in for sign-off, not TestRail/Xray as a product, not a hosted SaaS
 
 ---
 
 **Fabian Velasquez** — Senior QA Analyst / Senior Functional QA Specialist / Senior Software Testing Engineer.  
 Main work: **manual functional QA** on enterprise SaaS in the **browser** — who sees which buttons, two companies on one site (isolation), forms, activity log. Playwright and Postman are supporting skills, not this product.  
-Thesis: AI drafts. Named standards shape headings. The tester owns risk and sign-off.
+Thesis: AI drafts. Named standards shape headings. The Software Testing Engineer owns risk and sign-off.
 
 > **How a recruiter should walk it (60 seconds)**  
 > Open **`docs/`** — that folder is the portfolio. Everything else supports it.

@@ -46,7 +46,7 @@ Required: `product_name`, `item_under_test`, `objectives`, `in_scope`, `out_of_s
 
 Optional: `tools`, `environments_classes` (no cycle dates), `automation_intent`, `iso_25010_overlay` (boolean), `roles_who_tests_what` (role titles, **not** hours).
 
-Forbidden in strategy intake: `cycle_deadline`, `named_hours`, `sprint_calendar`, tester hour tables.
+Forbidden in strategy intake: `cycle_deadline`, `named_hours`, `sprint_calendar`, named people's hour tables.
 
 ## Plan — required vs optional
 

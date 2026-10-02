@@ -26,7 +26,7 @@ Home-company wrong role: **button hidden** (Upload/Export/Manage users). Do not 
 
 ## Procedure quality
 
-Each step is an action the tester can do without reading the author’s mind. Expected results are in the **Expected outcomes** field, not hidden in steps. Maximum 8 steps.
+Each step is an action the Software Testing Engineer can do without reading the author’s mind. Expected results are in the **Expected outcomes** field, not hidden in steps. Maximum 8 steps.
 
 ## CSV
 
@@ -42,6 +42,10 @@ Requirement Keys: semicolon-separated REQ IDs. Labels: area, risk id, `qa-scribe
 
 1. List every Critical/High risk in scope from the risk register. After drafting cases, confirm each one appears in at least one case's Risk field. An uncovered Critical/High is a fail (C15) — write the missing case, don't shrink the risk list.
 2. Scan the drafted pack's Technique column: at least one EP (happy), one NEG (negative), and one BVA (boundary) tag must appear somewhere in the pack (C14). Medium/Low risks with no dedicated case are acceptable without a note; Critical/High are not.
+
+## Cloud migration / 100% parity (when intake claims it)
+
+Read `standards/cloud-migration-approach-template.md` §3–4 and §12. Pack order: **reconciliation / INTEGRITY** and interface NEG before UI. A “100% data parity” pack that only samples rows **fails**. Dual-run compare is a valid expected result (legacy vs target on the same key). Named deltas are the only allowed mismatches. Do not write a wave calendar into a case.
 
 ## Golden regression
 

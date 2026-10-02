@@ -37,6 +37,8 @@ Required headings (keep this order). Optional ISO/IEC 25010 overlay is a checkli
 
 Describe the system, tenants, users, and what “correct” means for isolation and integrity. No sprint dates.
 
+If the program is a **cloud migration**, or the claim is **100% parity** with a legacy system, start from `standards/cloud-migration-approach-template.md` instead of stuffing wave dates into this file. That overlay is still a strategy (`STR-…`), not a plan. Dual-run and full reconciliation belong there; hours do not.
+
 ## 2. Test objectives
 
 Measurable objectives (authorisation correctness, isolation, integrity, audit completeness, UAT fitness). Not “ship Cycle 59”.

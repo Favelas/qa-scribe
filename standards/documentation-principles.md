@@ -33,6 +33,8 @@ Catalog of what to create: `standards/README.md`.
 
 Mixing strategy and plan is a **fail**. If the user asks for “a test plan with our long-term approach only”, produce a strategy and say so.
 
+A **cloud migration** high-level approach is the strategy overlay (`standards/cloud-migration-approach-template.md`), not a new document type and not a cycle plan. **100% parity** with legacy means: legacy is the oracle, dual-run diffs, full in-scope reconciliation (not a sample), named deltas if anything may differ, Crit parity gap = no-go.
+
 ## 2. AI drafts. Standards constrain. Humans sign.
 
 - The model fills headings and fields. It does not own severity, residual risk, or go / no-go.

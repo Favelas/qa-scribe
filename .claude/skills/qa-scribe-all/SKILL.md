@@ -25,7 +25,7 @@ Accept whatever the user pasted: user stories, a requirements list, a feature de
 
 1. Derive a candidate `product_name` from the input (ask in one line if genuinely absent).
 2. Split the input into distinct requirements and assign each a candidate `REQ-<AREA>-nn` (area codes: `standards/id-schemes.md`; invent a new short area code only if none fits).
-3. Apply `.claude/skills/qa-scribe-risks/SKILL.md`'s inference rules to draft candidate `RSK-<AREA>-nn` risks from those requirements.
+3. Apply `.claude/skills/qa-scribe-risks/SKILL.md`'s inference rules to draft candidate `RSK-<AREA>-nn` risks from those requirements. If the stories are a **cloud migration** or claim **100% parity**, also read overlay §12 (`standards/cloud-migration-approach-template.md`) as a lens — still no padding.
 4. Show the user a single short list — product name, REQ list, RSK list with level + one-line basis — and ask them to confirm or correct it **in one message**, not a form. Proceed with their edits; do not re-derive from scratch after confirmation.
 
 This list becomes the shared intake (`requirements_ref` / `risk_register_ref` equivalent) every downstream generator in this run will use — mint no further REQ/RSK IDs later in the same run without going back through this confirmed list.
@@ -58,7 +58,7 @@ When Plan or Report is in scope but its extra facts are missing, ask for them on
 For each doc type in scope, in this order — Risk register → Risk-based test matrix → Strategy → Test cases → Plan → Report → Prompts (skip any not in scope or missing required facts):
 
 1. Read `.claude/skills/qa-scribe-<type>/SKILL.md`, its `reference.md`, and its `rubric.md`.
-2. Follow those files' required headings, fail-if-missing conditions, and output path exactly, using the confirmed IDs from Step 2 and any facts gathered in Step 4.
+2. Follow those files' required headings, fail-if-missing conditions, and output path exactly, using the confirmed IDs from Step 2 and any facts gathered in Step 4. If the input is a **cloud migration** / **100% parity** program, the strategy generator **must** use `standards/cloud-migration-approach-template.md`, not the generic strategy heading list.
 3. Write the result to the exact `out/` path that skill's own SKILL.md specifies (e.g. `out/RSK-<PRODUCT>-register.md`, `out/MTX-<PRODUCT>-001.md`, `out/STR-<PRODUCT>-001.md`, `out/TC-<AREA>-pack.md` + `.csv`, `out/PLN-<PRODUCT>-<cycle>-001.md` + `out/<cycle>-rtm.csv`, `out/RPT-STS-...md` or `out/RPT-SUM-...md`).
 4. Self-check against that generator's own `rubric.md` before moving to the next doc; fix Must-fails before writing the file, don't hand the user a known-failing draft.
 
