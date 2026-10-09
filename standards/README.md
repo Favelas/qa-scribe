@@ -66,6 +66,7 @@ Keep them next to the generated set. VaultGrid copies live in `docs/`.
 | [standards-map.md](standards-map.md) | Which standard each document must cite (and what is forbidden) |
 | [id-schemes.md](id-schemes.md) | `STR-` `MTX-` `PLN-` `TC-` `RSK-` `REQ-` `RPT-` patterns |
 | [documentation-principles.md](documentation-principles.md) | Strategy ≠ plan; risk-first; human gate |
+| [confluence-qa-space.md](confluence-qa-space.md) | Process: where QA pages live in Confluence (This release vs How we work). Does **not** change generators 1–8. |
 | [rubrics/](rubrics/) | Fail-if-missing checklists per document |
 
 Citations for pull requests that change a template: [standards-map.md](standards-map.md).
